@@ -216,7 +216,7 @@ gulp.task('serve', ['clean', 'hbs', 'styles', 'lint', 'scripts'], () => {
   $.watch([
     './src/hbs/partials/**/*.hbs',
     './src/hbs/layouts/*.hbs',
-    './src/hbs/*.html'
+    './src/hbs/*.hbs'
   ], () => {
     gulp.start('hbs');
   });
