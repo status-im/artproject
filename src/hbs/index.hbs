@@ -5,9 +5,12 @@ title: 'Home'
 {{#extend "base"}}
   {{#content "main"}}
 
-    <div class="container">
-      <h1>Hello World!</h1>
-    </div>
+    {{> components/hero}}
+    {{> components/introduction}}
+    {{> components/project}}
+    {{> components/structure}}
+    {{> components/team}}
+    {{> components/get-involved}}
 
  {{/content}}
 {{/extend}}

@@ -131,6 +131,7 @@ gulp.task('hbs', () => {
           './node_modules/handlebars-layouts'
         ]
       })
+      .data('./src/hbs/data.json')
       .partials('./src/hbs/layouts/*.hbs')
       .partials('./src/hbs/partials/**/*.hbs')
     )
