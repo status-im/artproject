@@ -1,1 +1,6 @@
-console.log('Hello World!'); // eslint-disable-line no-console
+import 'babel-polyfill';
+import nav from './nav';
+
+document.addEventListener('DOMContentLoaded', () => {
+  nav();
+});
