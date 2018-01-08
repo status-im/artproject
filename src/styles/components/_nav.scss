@@ -28,7 +28,7 @@
     justify-content: center;
     width: 100%;
     height: calc(100vh - 60px);
-    font-size: 14px;
+    font-size: 12px;
     background-color: $color-gray;
     transform: translate3d(0, -100%, 0);
     box-shadow: 0 0 15px 0 rgba($color-black, .1);
@@ -49,8 +49,8 @@
     align-items: center;
     height: 100%;
     padding: 2.5vh 0;
-    font-family: Gilroy, sans-serif;
-    font-weight: 600;
+    font-family: 'Work Sans';
+    font-weight: 700;
     color: $color-white;
     text-align: center;
     text-decoration: none;
