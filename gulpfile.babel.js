@@ -208,8 +208,7 @@ gulp.task('serve', ['clean', 'hbs', 'styles', 'lint', 'scripts'], () => {
       routes: {
         '/images': 'src/images',
         '/fonts': 'src/fonts'
-      },
-      directory: true
+      }
     }
   });
 
