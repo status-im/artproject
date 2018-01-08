@@ -14,8 +14,4 @@ You can find out more by watching the video below and joining the upcoming meetu
 
 Is simply somewhere to keep the #ArtProject website for now and create bounties for any and all of the technical work we will require in order to make this the single greatest and most mind-boggling installation the crypto-world has ever seen!
 
-<<<<<<< HEAD
 Join us - the revolution will rendered artistically!
-=======
-Join us - the revolution will rendered artistically!
->>>>>>> Setup static site generator
