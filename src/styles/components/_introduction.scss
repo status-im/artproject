@@ -1,3 +1,41 @@
 .introduction {
+  color: white;
   background-color: $color-black;
+
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    margin: 30px 0;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  &__subheader,
+  &__content,
+  &__link {
+    font-family: $base-font-family;
+  }
+
+  &__subheader,
+  &__content,
+  &__button,
+  &__link {
+    margin-bottom: 30px;
+  }
+
+  &__subheader {
+    font-size: 22px;
+  }
+
+  &__content {
+    font-size: 18px;
+  }
+
+  &__link {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
 }

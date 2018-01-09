@@ -1,3 +1,33 @@
 <section class="section introduction">
+  <div class="introduction__container">
+    <h2 class="introduction__header">
+      {{introduction.header}}
+    </h2>
 
+    <div class="introduction__subheader">
+      {{introduction.subheader}}
+    </div>
+
+    <div class="introduction__content">
+      {{#each introduction.content as |paragraph|}}
+        <p>{{paragraph}}</p>
+      {{/each}}
+    </div>
+
+    <div class="introduction__button">
+      {{> components/button
+      label=introduction.button.label
+      outlineColor="#FFF"
+      backgroundColor="#000"
+      icon=(svg introduction.button.icon width="24px" height="24px")
+      }}
+    </div>
+
+    <div class="introduction__link">
+      <a href="#project">
+        {{introduction.nextSectionLink}}
+      </a>
+    </div>
+
+  </div>
 </section>
