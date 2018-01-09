@@ -115,7 +115,7 @@ gulp.task('hbs', () => {
       }
     }))
     .pipe($.frontMatter({
-      property: 'data',
+      property: 'data.frontMatter',
       remove: true
     }))
     .pipe(
