@@ -1,7 +1,8 @@
 <header class="header">
   <div class="header__container">
     <a class="header-logo" href="{{data.rootUrl}}" title="artproject">
-      <img class="header-logo__img" src="/logo.svg" alt="artproject">
+      {{svg 'images/logo.svg'}}
+      <span class="header-logo__subtitle">ART PROJECT</span>
     </a>
 
     {{> components/nav parentRouteName=parentRouteName}}

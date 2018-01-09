@@ -1,5 +1,17 @@
 {
   "rootUrl": "/",
+  "heroSection": {
+    "events": [
+      {
+        "text": "DEC 17 - 3359 26th Street",
+        "city": "SAN FRANSISCO CA"
+      },
+      {
+        "text": "DeC 21 -  111 RICHMOND ST WEST",
+        "city": "TORONTO ON"
+      }
+    ]
+  },
   "header": {
     "links": [
       {
