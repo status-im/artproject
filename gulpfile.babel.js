@@ -123,6 +123,7 @@ gulp.task('hbs', () => {
         bustCache: true,
         helpers: [
           './src/hbs/helpers/repeat.js',
+          './src/hbs/helpers/svg-icon.js',
           './node_modules/handlebars-helpers/lib/fs.js',
           './node_modules/handlebars-helpers/lib/comparison.js',
           './node_modules/handlebars-helpers/lib/collection.js',
