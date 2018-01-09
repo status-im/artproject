@@ -5,23 +5,25 @@
     <div class="hero__title--lower">PROJECT.</div>
   </h1>
 
-  {{> components/button
-    label="Telegram Community"
-    outlineColor="#FFF"
-    class="hero__button"
-    icon=(svg 'images/telegram-logo.svg' width="24px" height="24px")
-  }}
-
   <div class="hero__counter">01 - 06</div>
 
-  <div class="hero__detail">
-    <h3 class="hero__detail__title">UPCOMING EVENTS</h3>
-    {{#each data.heroSection.events as |event|}}
-      <p class="hero__detail__event">
-        {{ event.text }},
-        <strong class="hero__detail__city">{{ event.city }}</strong>
-      </p>
-    {{/each}}
+  <div class="hero__bottom">
+    <div class="hero__detail">
+      <h3 class="hero__detail__title">UPCOMING EVENTS</h3>
+      {{#each data.heroSection.events as |event|}}
+        <p class="hero__detail__event">
+          {{ event.text }},
+          <strong class="hero__detail__city">{{ event.city }}</strong>
+        </p>
+      {{/each}}
+    </div>
+
+    {{> components/button
+      label="Telegram Community"
+      outlineColor="#FFF"
+      class="hero__button"
+      icon=(svg 'images/telegram-logo.svg' width="24px" height="24px")
+    }}
   </div>
 
   <!-- scroll down component -->
