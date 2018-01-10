@@ -1,13 +1,10 @@
-$header-height--mobile: 70px;
-$header-height--desktop: 84px;
-
 .header {
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
   height: $header-height--mobile;
-  background-color: $color-gray;
+  background-color: $color-navy;
 
   &::after {
     position: absolute;
@@ -16,7 +13,7 @@ $header-height--desktop: 84px;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: $color-gray;
+    background: $color-navy;
     content: '';
   }
 
@@ -38,11 +35,14 @@ $header-height--desktop: 84px;
   position: relative;
   z-index: 10;
   display: block;
+  color: $color-white;
 
-  &__img {
-    display: block;
-    width: 90px;
-    height: auto;
+  &__subtitle {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    font-size: 12px;
+    transform: translate(50%, 100%);
   }
 }
 

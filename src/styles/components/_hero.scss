@@ -1,3 +1,146 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 .hero {
-  background-color: $color-gray;
+  padding: $header-height--mobile 20px 0;
+  color: $color-white;
+  background-color: $color-navy;
+
+  &__canvas {
+    width: 100%;
+    height: 65vh;
+    background-color: $color-orange;
+  }
+
+  &__title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-family: $title-font-family;
+    font-size: 36px;
+    transform: translate(-50%, -50%);
+
+    &--lower {
+      margin-top: -10px;
+      margin-left: 28px;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    top: 25%;
+    right: -20px;
+    font-size: 24px;
+    transform: rotate(-90deg);
+  }
+
+  &__button {
+    margin: 20px 0;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__detail {
+    padding: 20px 0 0;
+    font-size: 12px;
+
+    &__city {
+      display: block;
+    }
+
+    &__event {
+      margin: 10px 0 0;
+    }
+  }
+}
+
+@media #{$screen-sm} {
+  .hero {
+    &__canvas {
+      height: 70vh;
+      height: calc(100vh - #{$header-height--desktop * 2});
+    }
+
+    &__title {
+      font-size: 80px;
+
+      &--lower {
+        margin-top: -40px;
+        margin-left: 100px;
+      }
+    }
+
+    &__bottom {
+      align-items: center;
+    }
+
+    &__detail {
+      padding: 0;
+
+      &__title {
+        margin-bottom: 5px;
+      }
+
+      &__city {
+        display: initial;
+      }
+
+      &__event {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media #{$screen-md} {
+  .hero {
+    padding: $header-height--desktop 50px 0;
+
+    &__canvas {
+      width: 60%;
+    }
+
+    &__title {
+      font-size: 130px;
+    }
+
+    &__bottom {
+      height: $header-height--desktop;
+    }
+
+    &__counter {
+      top: 30%;
+      right: initial;
+      left: 70%;
+      transform-origin: left center;
+    }
+
+    &__button {
+      position: absolute;
+      top: 70%;
+      left: 70%;
+      float: initial;
+    }
+  }
+}
+
+@media #{$screen-lg} {
+  .hero {
+    &__title {
+      font-size: 160px;
+
+      &--lower {
+        margin-top: -60px;
+        margin-left: 8%;
+      }
+    }
+  }
 }
