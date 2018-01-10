@@ -135,11 +135,23 @@ body {
 @media #{$screen-lg} {
   .hero {
     &__title {
+      top: 50%;
       font-size: 160px;
 
       &--lower {
         margin-top: -60px;
         margin-left: 8%;
+      }
+    }
+  }
+}
+
+@media #{$screen-xlg} {
+  .hero {
+    &__title {
+      &--lower {
+        margin-left: 0;
+        padding-left: 18%;
       }
     }
   }
