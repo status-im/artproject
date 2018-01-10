@@ -1,16 +1,16 @@
 <section class="section hero">
   <div class="hero__canvas"></div>
   <h1 class="hero__title">
-    <div class="hero__title--upper">#ART</div>
-    <div class="hero__title--lower">PROJECT.</div>
+    <div class="hero__title--upper">{{ hero.header.upper }}</div>
+    <div class="hero__title--lower">{{ hero.header.lower }}</div>
   </h1>
 
   <div class="hero__counter">01 - 06</div>
 
   <div class="hero__bottom">
     <div class="hero__detail">
-      <h3 class="hero__detail__title">UPCOMING EVENTS</h3>
-      {{#each data.heroSection.events as |event|}}
+      <h3 class="hero__detail__title">{{ hero.eventsLabel }}</h3>
+      {{#each hero.events as |event|}}
         <p class="hero__detail__event">
           {{ event.text }},
           <strong class="hero__detail__city">{{ event.city }}</strong>
@@ -19,15 +19,13 @@
     </div>
 
     {{> components/button
-      label="Telegram Community"
+      label=hero.button.label
       outlineColor="#FFF"
       class="hero__button"
-      icon=(svg 'images/telegram-logo.svg' width="24px" height="24px")
+      icon=(svg hero.button.icon width="24px" height="24px")
     }}
   </div>
 
   <!-- scroll down component -->
-
-  <!-- page counter component -->
 
 </section>
