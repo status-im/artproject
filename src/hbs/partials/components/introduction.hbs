@@ -9,9 +9,15 @@
     </div>
 
     <div class="introduction__content">
-      {{#each introduction.content as |paragraph|}}
-        <p>{{paragraph}}</p>
-      {{/each}}
+      <div class="introduction__paragraph">
+        {{#each introduction.content as |paragraph|}}
+          <p>{{paragraph}}</p>
+        {{/each}}
+      </div>
+
+      <div class="introduction__img">
+        {{svg 'images/introduction.svg' }}
+      </div>
     </div>
 
     <div class="introduction__button">
@@ -28,6 +34,5 @@
         {{introduction.nextSectionLink}}
       </a>
     </div>
-
   </div>
 </section>
