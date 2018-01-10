@@ -12,7 +12,7 @@
 
   <div class="project__images">
     {{#each project.images as |imageSrc|}}
-      <img src={{imageSrc}} class="project__image--{{@index}}" alt="" />
+      <img src={{imageSrc}} class="project__image project__image--{{@index}}" alt="" />
     {{/each}}
   </div>
 

@@ -1,5 +1,45 @@
 .project {
+  position: relative;
   padding: 25px;
   color: $color-white;
   background-color: $color-orange;
+
+  &__content {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  &__subheader {
+    font-weight: 400;
+  }
+
+  &__images {
+    padding-top: 10px;
+  }
+
+  &__image {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  &__button {
+    margin-top: 10px;
+  }
+
+  &__counter {
+    position: absolute;
+    bottom: 20%;
+    left: 22px;
+    font-size: 24px;
+    transform: rotate(-90deg);
+    transform-origin: left center;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
 }
