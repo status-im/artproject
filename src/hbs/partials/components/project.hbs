@@ -1,6 +1,9 @@
 <section class="section project">
 
-  <h2 class="project__header">{{ project.header }}</h2>
+  {{> components/heading
+    text=project.header
+    class="project_header"
+  }}
 
   <div class="project__content">
     <div class="project__subheader">{{ project.subheader }}</div>
