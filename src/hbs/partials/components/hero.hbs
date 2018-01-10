@@ -24,8 +24,12 @@
       class="hero__button"
       icon=(svg hero.button.icon width="24px" height="24px")
     }}
-  </div>
 
-  <!-- scroll down component -->
+    <a href="#" class="hero__scroll">
+      {{svg 'images/arrow-down.svg' class="hero__scroll__icon"}}
+      <div class="hero__scroll__text">{{ hero.nextSectionLink }}</div>
+    </a>
+
+  </div>
 
 </section>
