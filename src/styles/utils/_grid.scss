@@ -32,6 +32,10 @@
   @media #{$screen-lg} {
     width: $container-lg + $grid-gutter;
   }
+
+  @media #{$screen-xlg} {
+    width: $container-xlg + $grid-gutter;
+  }
 }
 
 @mixin row {
