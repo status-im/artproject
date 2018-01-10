@@ -10,15 +10,29 @@ introduction:
 
   button:
     label: 'Signup for newsletter'
-    icon: 'images/telegram-logo.svg'
 
   nextSectionLink: 'Learn more about the project'
+
+hero:
+  header:
+    upper: '#Art'
+    lower: 'Project.'
+  eventsLabel: 'UPCOMING EVENTS'
+  events:
+    - text: 'DEC 17 - 3359 26th Street'
+      city: 'SAN FRANSISCO CA'
+    - text: 'DeC 21 -  111 RICHMOND ST WEST'
+      city: 'TORONTO ON'
+  button:
+    label: 'Telegram Community'
+    icon: 'images/telegram-logo.svg'
+  nextSectionLink: 'Scroll Down'
 ---
 
 {{#extend "base"}}
   {{#content "main"}}
 
-    {{> components/hero}}
+    {{> components/hero hero=frontMatter.hero}}
 
     {{> components/introduction introduction=frontMatter.introduction}}
 
