@@ -19,6 +19,8 @@ body {
   }
 
   &__header {
+    @include header;
+
     position: absolute;
     top: 45%;
     left: 50%;
