@@ -27,6 +27,24 @@ hero:
     label: 'Telegram Community'
     icon: 'images/telegram-logo.svg'
   nextSectionLink: 'Scroll Down'
+
+project:
+  header: 'Project -'
+  subheader: 'This first art project proposes the visualization and experience of immersion inside the “dogetherium bridge”, an endeavour that TrueBit is undertaking to create a “bridge" between the Dogecoin and Ethereum blockchains.'
+  content:
+    - 'Using high impact, immersive and interactive art, in conjunction with the underlying coding and computational workings happening in the Doge-ETH bridge, this project aims to foster community, participation and reflections around the pioneering work in the blockchain ecosystem.'
+    - 'The art installation will be a traveling, penetrable sculpture that will provide an indoor and outdoor experience in the form of sounds, light and design. The surface of the installation will reflect the activity in the Doge-ETH bridge. The sculpture will be the space were creatives will realize their artistic vision.'
+
+  images:
+    - 'images/project-img1.png'
+    - 'images/project-img2.png'
+    - 'images/project-img3.png'
+
+  button:
+    label: 'Project Proposal'
+    icon: 'images/file.svg'
+
+  nextSectionLink: 'Learn more about the structure ↓'
 ---
 
 {{#extend "base"}}
@@ -36,7 +54,7 @@ hero:
 
     {{> components/introduction introduction=frontMatter.introduction}}
 
-    {{> components/project}}
+    {{> components/project project=frontMatter.project }}
     {{> components/structure}}
     {{> components/team}}
     {{> components/get-involved}}
