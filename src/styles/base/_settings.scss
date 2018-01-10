@@ -6,18 +6,21 @@ $xs: 480px;
 $sm: 768px;
 $md: 992px;
 $lg: 1200px;
+$xlg: 1440px;
 
-$grid-gutter: 30px;
+$grid-gutter: 50px;
 $grid-columns: 12;
 
 $container-sm: 720px;
 $container-md: 940px;
 $container-lg: 1140px;
+$container-xlg: 1340px;
 
 $screen-xs: 'only screen and (min-width: 1px)';
 $screen-sm: 'only screen and (min-width: #{$sm})';
 $screen-md: 'only screen and (min-width: #{$md})';
 $screen-lg: 'only screen and (min-width: #{$lg})';
+$screen-xlg: 'only screen and (min-width: #{$xlg})';
 
 $screen-only-xs: 'only screen and (max-width: #{$xs - 1})';
 $screen-only-sm: 'only screen and (min-width: #{$xs}) and (max-width: #{$md - 1})';

@@ -2,9 +2,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  width: 100%;
+  padding: 16px;
   font-family: 'Work Sans';
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: white;
   text-transform: uppercase;
@@ -12,5 +13,11 @@
 
   &__icon {
     margin-right: 10px;
+  }
+
+  @media #{$screen-sm} {
+    width: initial;
+    padding: 25px;
+    font-size: 16px;
   }
 }

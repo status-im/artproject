@@ -1,12 +1,27 @@
 ---
 title: 'Home'
+
+introduction:
+  header: 'Introduction —'
+  subheader: 'TrueBit, in collaboration with artist Jessica Angel, are creating an open source, massive public art installation connected to the blockchain in real time.'
+  content:
+    - 'This public structure will be the starting point for creative interactions and collaborations to happen with creatives from different parts of the world using the blockchain as a creative tool.'
+    - 'We are facing exciting times in the history of humanity, and this project will pay tribute to the greatness of this technology, while proposing a holistic approach to knowledge; where music, art, education, economics, mathematics and philosophy take place under the same roof.'
+
+  button:
+    label: 'Signup for newsletter'
+    icon: 'images/telegram-logo.svg'
+
+  nextSectionLink: 'Learn more about the project'
 ---
 
 {{#extend "base"}}
   {{#content "main"}}
 
     {{> components/hero}}
-    {{> components/introduction}}
+
+    {{> components/introduction introduction=frontMatter.introduction}}
+
     {{> components/project}}
     {{> components/structure}}
     {{> components/team}}

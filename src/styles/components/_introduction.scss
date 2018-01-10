@@ -1,3 +1,110 @@
 .introduction {
+  display: flex;
+  align-items: center;
+  color: white;
   background-color: $color-black;
+
+  &__container {
+    @include container;
+
+    position: relative;
+  }
+
+  &__img {
+    display: none;
+
+    @media #{$screen-sm} {
+      display: block;
+    }
+
+    @media #{$screen-lg} {
+      position: absolute;
+      top: 60px;
+      right: 0;
+    }
+
+    @media #{$screen-xlg} {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__header {
+    margin: 30px 0;
+    font-family: $title-font-family;
+    font-size: 26px;
+    font-weight: 400;
+
+    @media #{$screen-sm} {
+      font-size: 52px;
+    }
+
+    @media #{$screen-lg} {
+      margin: 80px 0;
+      font-size: 60px;
+    }
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__button {
+    margin-bottom: 30px;
+
+    @media #{$screen-xlg} {
+      position: absolute;
+      top: 65%;
+    }
+  }
+
+  &__subheader {
+    position: relative;
+    z-index: 2;
+    font-size: 22px;
+
+    @media #{$screen-sm} {
+      font-size: 26px;
+    }
+  }
+
+  &__paragraph {
+    font-size: 18px;
+
+    @media #{$screen-sm} {
+      font-size: 20px;
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__subheader,
+  &__paragraph {
+    @media #{$screen-lg} {
+      max-width: 780px;
+    }
+
+    @media #{$screen-xlg} {
+      max-width: 680px;
+      transform: translateX(60%);
+    }
+  }
+
+  &__subheader,
+  &__paragraph,
+  &__link {
+    margin-bottom: 30px;
+    font-family: $base-font-family;
+
+    @media #{$screen-lg} {
+      margin-bottom: 45px;
+    }
+
+    @media #{$screen-xlg} {
+      margin-bottom: 60px;
+    }
+  }
 }
