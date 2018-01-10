@@ -1,2 +1,32 @@
 <section class="section project">
+
+  <h2 class="project__header">{{ project.header }}</h2>
+
+  <div class="project__content">
+    <div class="project__subheader">{{ project.subheader }}</div>
+
+    {{#each project.content as |paragraph|}}
+      <p>{{ paragraph }}</p>
+    {{/each}}
+  </div>
+
+  <div class="project__images">
+    {{#each project.images as |imageSrc|}}
+      <img src={{imageSrc}} class="project__image--{{@index}}" alt="" />
+    {{/each}}
+  </div>
+
+  {{> components/button
+    class="project__button"
+    backgroundColor="#ff5301"
+    label=project.button.label
+    icon=(svg project.button.icon)
+  }}
+
+  <div class="project__counter">{{ project.counterText }}</div>
+
+  <a href="#" class="project__link">
+    {{ project.nextSectionLink }}
+  </div>
+
 </section>
