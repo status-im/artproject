@@ -1,0 +1,13 @@
+.heading {
+  @include heading;
+
+  font-size: 26px;
+
+  @media #{$screen-sm} {
+    font-size: 52px;
+  }
+
+  @media #{$screen-lg} {
+    font-size: 60px;
+  }
+}
