@@ -18,7 +18,7 @@ body {
     background-color: $color-orange;
   }
 
-  &__title {
+  &__header {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -87,7 +87,7 @@ body {
       height: calc(100vh - #{$header-height--desktop * 2});
     }
 
-    &__title {
+    &__header {
       font-size: 80px;
 
       &--lower {
@@ -107,7 +107,7 @@ body {
     &__detail {
       padding: 0;
 
-      &__title {
+      &__header {
         margin-bottom: 5px;
       }
 
@@ -130,7 +130,7 @@ body {
       width: 60%;
     }
 
-    &__title {
+    &__header {
       font-size: 130px;
 
       &--lower {
@@ -166,7 +166,7 @@ body {
 
 @media #{$screen-lg} {
   .hero {
-    &__title {
+    &__header {
       top: 50%;
       font-size: 160px;
 
@@ -180,7 +180,7 @@ body {
 
 @media #{$screen-xlg} {
   .hero {
-    &__title {
+    &__header {
       font-size: 170px;
 
       &--lower {
