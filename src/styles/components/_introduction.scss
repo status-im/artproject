@@ -31,17 +31,9 @@
 
   &__header {
     margin: 30px 0;
-    font-family: $title-font-family;
-    font-size: 26px;
-    font-weight: 400;
-
-    @media #{$screen-sm} {
-      font-size: 52px;
-    }
 
     @media #{$screen-lg} {
       margin: 80px 0;
-      font-size: 60px;
     }
   }
 

@@ -19,7 +19,7 @@ body {
   }
 
   &__header {
-    @include header;
+    @include heading;
 
     position: absolute;
     top: 45%;

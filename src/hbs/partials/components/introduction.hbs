@@ -1,8 +1,10 @@
 <section class="section introduction">
   <div class="introduction__container">
-    <h2 class="introduction__header">
-      {{introduction.header}}
-    </h2>
+
+    {{> components/heading
+      text=introduction.header
+      class="introduction__header"
+    }}
 
     <div class="introduction__subheader">
       {{introduction.subheader}}
