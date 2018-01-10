@@ -29,7 +29,7 @@ body {
 
     &--lower {
       margin-top: -10px;
-      margin-left: 28px;
+      padding-left: 50px;
     }
   }
 
@@ -37,6 +37,7 @@ body {
     position: absolute;
     top: 25%;
     right: -20px;
+    z-index: 1;
     font-size: 24px;
     transform: rotate(-90deg);
   }
@@ -91,7 +92,7 @@ body {
 
       &--lower {
         margin-top: -40px;
-        margin-left: 100px;
+        padding-left: 110px;
       }
     }
 
@@ -131,6 +132,10 @@ body {
 
     &__title {
       font-size: 130px;
+
+      &--lower {
+        margin-top: -60px;
+      }
     }
 
     &__bottom {
@@ -166,8 +171,8 @@ body {
       font-size: 160px;
 
       &--lower {
-        margin-top: -60px;
-        margin-left: 8%;
+        margin-top: -80px;
+        padding-left: 8%;
       }
     }
   }
@@ -180,7 +185,6 @@ body {
 
       &--lower {
         margin-top: -80px;
-        margin-left: 0;
         padding-left: 18%;
       }
     }
