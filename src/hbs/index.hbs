@@ -27,6 +27,20 @@ hero:
     label: 'Telegram Community'
     icon: 'images/telegram-logo.svg'
   nextSectionLink: 'Scroll Down'
+
+structure:
+  header: 'Structure —'
+  button:
+    label: 'Floor / Elevation Plans'
+    icon: 'images/telegram-logo.svg'
+  content:
+    upper:
+      - 'The starting point to conceptualize the public art structure is the Mobius bridge, a pedestrian bridge over the Avon, designed by Hakes Associates of Bristol, UK. We found this bridge to be remarkably interesting as it explores the structure of the Mobius strip, providing a connection between point A and B while maintaining a single, unified surface.'
+      - 'The Mobius strip leads to the construction of a very interesting solid called the Klein Bottle. Imagine connecting the sides of a paper ring to come up with a donut shape. Similarly, imagine connecting the sides of a Mobius strip, you would end up with a Klein bottle.'
+    lower:
+      - 'The Klein bottle shares the same characteristics as the Mobius strip of having a unified surface. In addition, the Klein bottle provides an enclosed environment perfect for the development of a public programming schedule to take place inside of it. Hence, The public art structure will be a penetrable Klein bottle that symbolizes the bridge between the Dogecoin and Ethereum blockchains, connecting the outer side with the inner surface through the bottleneck pass way.'
+  nextSectionLink: 'Learn more about the team'
+  counter: '04 - 06'
 ---
 
 {{#extend "base"}}
@@ -37,7 +51,9 @@ hero:
     {{> components/introduction introduction=frontMatter.introduction}}
 
     {{> components/project}}
-    {{> components/structure}}
+
+    {{> components/structure structure=frontMatter.structure}}
+
     {{> components/team}}
     {{> components/get-involved}}
 
