@@ -6,12 +6,12 @@
       class="introduction__header"
     }}
 
-    <div class="introduction__subheader">
+    <div class="introduction__subheader text--big">
       {{introduction.subheader}}
     </div>
 
     <div class="introduction__content">
-      <div class="introduction__paragraph">
+      <div class="introduction__paragraph text--small">
         {{#each introduction.content as |paragraph|}}
           <p>{{paragraph}}</p>
         {{/each}}
@@ -24,9 +24,9 @@
 
     <div class="introduction__button">
       {{> components/button
-      label=introduction.button.label
-      outlineColor="#FFF"
-      backgroundColor="#000"
+        label=introduction.button.label
+        outlineColor="#FFF"
+        backgroundColor="#000"
       }}
     </div>
 

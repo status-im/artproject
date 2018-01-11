@@ -44,22 +44,6 @@
     font-weight: 300;
     color: $color-black;
 
-    &--small {
-      font-size: 18px;
-
-      @media #{$screen-xlg} {
-        font-size: 20px;
-      }
-    }
-
-    &--big {
-      font-size: 20px;
-
-      @media #{$screen-xlg} {
-        font-size: 26px;
-      }
-    }
-
     @media #{$screen-sm} {
       margin-top: 60px;
     }
