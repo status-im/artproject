@@ -10,6 +10,10 @@
     position: relative;
   }
 
+  &__content {
+    display: flex;
+  }
+
   &__img {
     display: none;
 
@@ -37,10 +41,6 @@
     }
   }
 
-  &__content {
-    display: flex;
-  }
-
   &__button {
     margin-bottom: 30px;
 
@@ -53,19 +53,6 @@
   &__subheader {
     position: relative;
     z-index: 2;
-    font-size: 22px;
-
-    @media #{$screen-sm} {
-      font-size: 26px;
-    }
-  }
-
-  &__paragraph {
-    font-size: 18px;
-
-    @media #{$screen-sm} {
-      font-size: 20px;
-    }
   }
 
   &__link {
@@ -89,7 +76,6 @@
   &__paragraph,
   &__link {
     margin-bottom: 30px;
-    font-family: $base-font-family;
 
     @media #{$screen-lg} {
       margin-bottom: 45px;
