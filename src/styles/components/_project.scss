@@ -4,10 +4,35 @@
   color: $color-white;
   background-color: $color-orange;
 
+  &__header {
+    @media #{$screen-md} {
+      position: absolute;
+      bottom: 100px;
+      left: 40px;
+    }
+  }
+
   &__content {
     margin-top: 20px;
     font-size: 18px;
     font-weight: 300;
+
+    @media #{$screen-sm} {
+      padding-right: 20px;
+    }
+
+    @media #{$screen-md} {
+      width: 60%;
+      padding-right: 0;
+      padding-left: 50px;
+    }
+  }
+
+  &__content,
+  &__images {
+    @media #{$screen-sm} {
+      width: 50%;
+    }
   }
 
   &__subheader {
@@ -16,15 +41,48 @@
 
   &__images {
     padding-top: 10px;
+
+    @media #{$screen-sm} {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: -50px;
+    }
+
+    @media #{$screen-md} {
+      width: 40%;
+      margin-top: 0;
+    }
   }
 
   &__image {
-    max-width: 100%;
+    width: 100%;
     margin: 10px 0;
+
+    @media #{$screen-sm} {
+      width: 80%;
+      max-width: 250px;
+
+      &--1 {
+        margin-top: -50px;
+        margin-left: 80px;
+      }
+
+      &--2 {
+        margin-top: -70px;
+        margin-left: 10px;
+      }
+    }
   }
 
   &__button {
-    margin-top: 10px;
+    margin: 10px 0;
+
+    @media #{$screen-md} {
+      position: absolute;
+      top: 55%;
+      left: 20%;
+    }
   }
 
   &__counter {
@@ -32,8 +90,19 @@
     bottom: 20%;
     left: 22px;
     font-size: 24px;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     transform-origin: left center;
+
+    @media #{$screen-sm} {
+      right: 0;
+      left: initial;
+    }
+
+    @media #{$screen-md} {
+      right: 50px;
+      bottom: 20px;
+      transform-origin: right center;
+    }
   }
 
   &__link {
@@ -41,5 +110,23 @@
     margin-top: 20px;
     font-size: 12px;
     text-transform: uppercase;
+  }
+
+  &__wrapper {
+    @media #{$screen-sm} {
+      display: flex;
+    }
+
+    @media #{$screen-md} {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media #{$screen-md} {
+    padding: 50px;
+  }
+
+  @media #{$screen-lg} {
+    padding: 80px;
   }
 }
