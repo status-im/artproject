@@ -27,11 +27,15 @@ body {
     z-index: 1;
     font-family: $title-font-family;
     font-size: 36px;
+    text-align: center;
     transform: translate(-50%, -50%);
 
+    &--upper {
+      transform: translate(-35%, 0);
+    }
+
     &--lower {
-      margin-top: -10px;
-      padding-left: 50px;
+      transform: translate(12%, -30%);
     }
   }
 
@@ -90,12 +94,8 @@ body {
     }
 
     &__header {
+      top: 50%;
       font-size: 80px;
-
-      &--lower {
-        margin-top: -40px;
-        padding-left: 110px;
-      }
     }
 
     &__button {
@@ -135,8 +135,12 @@ body {
     &__header {
       font-size: 130px;
 
+      &--upper {
+        transform: translate(-30%, 20%);
+      }
+
       &--lower {
-        margin-top: -60px;
+        transform: translate(8%, -20%);
       }
     }
 
@@ -169,12 +173,10 @@ body {
 @media #{$screen-lg} {
   .hero {
     &__header {
-      top: 50%;
       font-size: 160px;
 
       &--lower {
-        margin-top: -80px;
-        padding-left: 8%;
+        transform: translate(5%, -20%);
       }
     }
   }
@@ -185,9 +187,12 @@ body {
     &__header {
       font-size: 170px;
 
+      &--upper {
+        transform: translate(-33%, 20%);
+      }
+
       &--lower {
-        margin-top: -80px;
-        padding-left: 18%;
+        transform: translate(12%, -20%);
       }
     }
   }
