@@ -1,3 +1,74 @@
 .structure {
+  position: relative;
+  padding: 25px;
+  color: $color-scarlet;
   background-color: $color-white;
+
+  &__content {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  &__header {
+    position: absolute;
+    top: -19px;
+    right: -1px;
+
+    @media #{$screen-sm} {
+      top: -38px;
+    }
+  }
+
+  &__details {
+    font-weight: 300;
+    color: $color-black;
+
+    &--small {
+      font-size: 18px;
+
+      @media #{$screen-sm} {
+        font-size: 20px;
+      }
+    }
+
+    &--big {
+      font-size: 20px;
+
+      @media #{$screen-sm} {
+        font-size: 26px;
+      }
+    }
+
+    @media #{$screen-sm} {
+      margin-top: 60px;
+    }
+  }
+
+  &__counter {
+    font-size: 20px;
+    font-weight: 400;
+    color: $color-scarlet;
+
+    @media #{$screen-sm} {
+      margin: 30px 0;
+      font-size: 24px;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    padding-bottom: 95%;
+    background: url('../images/structure.jpg') no-repeat center center / cover;
+  }
+
+  &__button {
+    margin-top: 10px;
+    color: $color-scarlet;
+
+    @media #{$screen-sm} {
+      position: absolute;
+      right: 18%;
+      bottom: -20px;
+    }
+  }
 }
