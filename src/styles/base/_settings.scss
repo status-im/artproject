@@ -23,7 +23,7 @@ $screen-lg: 'only screen and (min-width: #{$lg})';
 $screen-xlg: 'only screen and (min-width: #{$xlg})';
 
 $screen-only-xs: 'only screen and (max-width: #{$xs - 1})';
-$screen-only-sm: 'only screen and (min-width: #{$xs}) and (max-width: #{$md - 1})';
+$screen-only-sm: 'only screen and (min-width: #{$sm}) and (max-width: #{$md - 1})';
 $screen-only-md: 'only screen and (min-width: #{$md}) and (max-width: #{$lg - 1})';
 $screen-only-lg: 'only screen and (min-width: #{$lg})';
 

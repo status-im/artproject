@@ -1,14 +1,31 @@
 .project {
   position: relative;
+  min-height: calc(100vh - #{$header-height--desktop});
   padding: 25px;
   color: $color-white;
   background-color: $color-orange;
+
+  &__container {
+    @media #{$screen-md} {
+      @include container;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media #{$screen-xlg} {
+      position: relative;
+    }
+  }
 
   &__header {
     @media #{$screen-md} {
       position: absolute;
       bottom: 100px;
       left: 40px;
+      z-index: 2;
     }
   }
 
@@ -26,11 +43,15 @@
       padding-right: 0;
       padding-left: 50px;
     }
+
+    @media #{$screen-lg} {
+      font-size: 24px;
+    }
   }
 
   &__content,
   &__images {
-    @media #{$screen-sm} {
+    @media #{$screen-only-sm} {
       width: 50%;
     }
   }
@@ -50,6 +71,8 @@
     }
 
     @media #{$screen-md} {
+      flex-direction: column-reverse;
+      justify-content: center;
       width: 40%;
       margin-top: 0;
     }
@@ -73,6 +96,32 @@
         margin-left: 10px;
       }
     }
+
+    @media #{$screen-md} {
+      max-width: initial;
+
+      &--0 {
+        position: relative;
+        z-index: 1;
+        width: 50%;
+        margin: 0;
+        margin-top: -35%;
+        margin-left: -40%;
+      }
+
+      &--1 {
+        position: relative;
+        width: 60%;
+        margin: 0;
+        margin-top: -25%;
+        margin-left: 50%;
+      }
+
+      &--2 {
+        width: 70%;
+        margin: 0;
+      }
+    }
   }
 
   &__button {
@@ -80,8 +129,9 @@
 
     @media #{$screen-md} {
       position: absolute;
-      top: 55%;
-      left: 20%;
+      top: 50%;
+      left: 15%;
+      z-index: 2;
     }
   }
 
@@ -103,6 +153,10 @@
       bottom: 20px;
       transform-origin: right center;
     }
+
+    @media #{$screen-xlg} {
+      right: -20px;
+    }
   }
 
   &__link {
@@ -110,6 +164,16 @@
     margin-top: 20px;
     font-size: 12px;
     text-transform: uppercase;
+
+    @media #{$screen-md} {
+      position: absolute;
+      bottom: 30px;
+      left: 50px;
+    }
+
+    @media #{$screen-xlg} {
+      bottom: -40px;
+    }
   }
 
   &__wrapper {
@@ -123,10 +187,16 @@
   }
 
   @media #{$screen-md} {
-    padding: 50px;
+    padding: 50px 0;
   }
 
   @media #{$screen-lg} {
-    padding: 80px;
+    // padding: 80px;
+  }
+
+  @media #{$screen-xlg} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

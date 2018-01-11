@@ -1,39 +1,43 @@
 <section class="section project">
 
-  {{> components/heading
-    text=project.header
-    class="project__header"
-  }}
+  <div class="project__container">
 
-  <div class="project__wrapper">
-    <div class="project__content">
-      <div class="project__subheader">{{ project.subheader }}</div>
+    {{> components/heading
+      text=project.header
+      class="project__header"
+    }}
 
-      {{#each project.content as |paragraph|}}
-        <p>{{ paragraph }}</p>
-      {{/each}}
+    <div class="project__wrapper">
+      <div class="project__content">
+        <div class="project__subheader">{{ project.subheader }}</div>
 
-      {{> components/button
-        class="project__button"
-        backgroundColor="#ff5301"
-        label=project.button.label
-        icon=(svg project.button.icon)
-      }}
+        {{#each project.content as |paragraph|}}
+          <p>{{ paragraph }}</p>
+        {{/each}}
+
+        {{> components/button
+          class="project__button"
+          backgroundColor="#ff5301"
+          label=project.button.label
+          icon=(svg project.button.icon)
+        }}
+      </div>
+
+      <div class="project__images">
+        {{#each project.images as |imageSrc|}}
+          <img src={{imageSrc}} class="project__image project__image--{{@index}}" alt="" />
+        {{/each}}
+      </div>
+
+
     </div>
 
-    <div class="project__images">
-      {{#each project.images as |imageSrc|}}
-        <img src={{imageSrc}} class="project__image project__image--{{@index}}" alt="" />
-      {{/each}}
+    <div class="project__counter">{{ project.counterText }}</div>
+
+    <a href="#" class="project__link">
+      {{ project.nextSectionLink }}
     </div>
 
-
-  </div>
-
-  <div class="project__counter">{{ project.counterText }}</div>
-
-  <a href="#" class="project__link">
-    {{ project.nextSectionLink }}
   </div>
 
 </section>
