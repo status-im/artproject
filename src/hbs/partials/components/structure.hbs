@@ -1,38 +1,40 @@
 <section class="section structure">
-  <div class="structure__content">
-    {{> components/heading
+  <div class="structure__container">
+    <div class="structure__content">
+      {{> components/heading
       text=structure.header
       class="structure__header"
-    }}
-
-    <div class="structure__image"></div>
-
-    <div class="structure__button">
-      {{> components/button
-      label=structure.button.label
-      outlineColor="#ff3a00"
-      backgroundColor="#000"
       }}
-    </div>
-  </div>
-  <div class="structure__details">
-    <div class="structure__details--small">
-      {{#each structure.content.upper as |paragraph|}}
-        <p>{{paragraph}}</p>
-      {{/each}}
-    </div>
-    <div class="structure__details--big">
-      {{#each structure.content.lower as |paragraph|}}
-        <p>{{paragraph}}</p>
-      {{/each}}
-    </div>
 
-    <div class="structure__counter">
-      04 - 06
-    </div>
+      <div class="structure__image"></div>
 
-    <div class="structure__link">
-      Learn more about the team
+      <div class="structure__button">
+        {{> components/button
+        label=structure.button.label
+        outlineColor="#ff3a00"
+        backgroundColor="#000"
+        }}
+      </div>
+    </div>
+    <div class="structure__details">
+      <div class="structure__details--small">
+        {{#each structure.content.upper as |paragraph|}}
+          <p>{{paragraph}}</p>
+        {{/each}}
+      </div>
+      <div class="structure__details--big">
+        {{#each structure.content.lower as |paragraph|}}
+          <p>{{paragraph}}</p>
+        {{/each}}
+      </div>
+
+      <div class="structure__counter">
+        {{ structure.counter }}
+      </div>
+
+      <div class="structure__link">
+        {{ structure.nextSectionLink }}
+      </div>
     </div>
   </div>
 </section>

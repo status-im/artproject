@@ -1,21 +1,42 @@
 .structure {
-  position: relative;
-  padding: 25px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
   color: $color-scarlet;
   background-color: $color-white;
 
+  &__container {
+    @include container;
+
+    position: relative;
+
+    @media #{$screen-lg} {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
   &__content {
     position: relative;
+    height: 100%;
     margin-top: 30px;
+
+    @media #{$screen-lg} {
+      width: 50%;
+    }
   }
 
   &__header {
     position: absolute;
     top: -19px;
-    right: -1px;
+    right: -2px;
 
     @media #{$screen-sm} {
       top: -38px;
+    }
+
+    @media #{$screen-lg} {
+      top: -44px;
     }
   }
 
@@ -26,7 +47,7 @@
     &--small {
       font-size: 18px;
 
-      @media #{$screen-sm} {
+      @media #{$screen-xlg} {
         font-size: 20px;
       }
     }
@@ -34,13 +55,18 @@
     &--big {
       font-size: 20px;
 
-      @media #{$screen-sm} {
+      @media #{$screen-xlg} {
         font-size: 26px;
       }
     }
 
     @media #{$screen-sm} {
       margin-top: 60px;
+    }
+
+    @media #{$screen-lg} {
+      width: 50%;
+      margin-top: 0;
     }
   }
 
@@ -70,5 +96,9 @@
       right: 18%;
       bottom: -20px;
     }
+  }
+
+  @media #{$screen-sm} {
+    margin-top: 30px;
   }
 }
