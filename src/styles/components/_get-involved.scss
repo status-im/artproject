@@ -1,4 +1,7 @@
 .get-involved {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - #{$header-height--desktop});
   color: $color-white;
   background-color: $color-gray;
 
@@ -12,6 +15,19 @@
     font-weight: 300;
   }
 
+  &__content {
+    @media #{$screen-sm} {
+      width: 50%;
+      padding-right: 25px;
+    }
+  }
+
+  &__details {
+    @media #{$screen-sm} {
+      width: 50%;
+    }
+  }
+
   &__counter {
     font-size: 24px;
   }
@@ -20,12 +36,34 @@
   &__header,
   &__description,
   &__button,
+  &__details,
   &__details-title {
     margin-top: 24px;
   }
 
+  &__buttons {
+    @media #{$screen-sm} {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media #{$screen-md} {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    @media #{$screen-sm} {
+      display: flex;
+    }
+  }
+
   &__button + &__button {
     margin-top: 20px;
+
+    @media #{$screen-md} {
+      margin-left: 10px;
+    }
   }
 
   &__list {

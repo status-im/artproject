@@ -1,39 +1,43 @@
 <section class="section get-involved">
   <div class="get-involved__container">
 
-    <div class="get-involved__content">
-      {{> components/heading
-        text=getInvolved.header
-        class="get-involed__header"
-      }}
+    {{> components/heading
+      text=getInvolved.header
+      class="get-involved__header"
+    }}
 
-      <div class="get-involved__description text--medium">
-        {{ getInvolved.description }}
+    <div class="get-involved__wrapper">
+      <div class="get-involved__content">
+        <div class="get-involved__description text--medium">
+          {{ getInvolved.description }}
+        </div>
+
+        <div class="get-involved__buttons">
+          {{#each getInvolved.buttons as |button|}}
+            {{> components/button
+              class="get-involved__button"
+              outlineColor="#fff"
+              label=button.label
+              icon=(svg button.icon)
+            }}
+          {{/each}}
+        </div>
       </div>
 
-      {{#each getInvolved.buttons as |button|}}
-        {{> components/button
-          class="get-involved__button"
-          outlineColor="#fff"
-          label=button.label
-          icon=(svg button.icon)
-        }}
-      {{/each}}
-    </div>
+      <div class="get-involved__details">
+        <div class="get-involved__details-title text--small">
+          {{ getInvolved.details.title }}
+        </div>
 
-    <div class="get-involved__details">
-      <div class="get-involved__details-title text--small">
-        {{ getInvolved.details.title }}
-      </div>
+        <ul class="get-involved__list text-small">
+          {{#each getInvolved.details.list as |listItem|}}
+            <li class="get-involved__list-item">{{ listItem }}</li>
+          {{/each}}
+        </ul>
 
-      <ul class="get-involved__list text-small">
-        {{#each getInvolved.details.list as |listItem|}}
-          <li class="get-involved__list-item">{{ listItem }}</li>
-        {{/each}}
-      </ul>
-
-      <div class="get-involved__counter">
-        {{ getInvolved.counter }}
+        <div class="get-involved__counter">
+          {{ getInvolved.counter }}
+        </div>
       </div>
     </div>
 
