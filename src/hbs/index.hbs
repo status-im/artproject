@@ -61,6 +61,32 @@ structure:
   nextSectionLink: 'Learn more about the team'
   counter: '04 - 06'
 
+getInvolved:
+  header: 'Get Involved —'
+  counter: '06 - 06'
+  description:
+    - 'We are looking to hear about your ideas, skills and passions. This project is about fostering collaborations with creators, thinkers, burners, makers, and people excited about technology and art. Get involved by communicating with the team (artproject@truebit.io), sharing your vision and affiliation to these ideas. Anything counts as long as there is passion, rigor and commitment!'
+  buttons:
+    - label: 'Collaborator Guidelines'
+      icon: 'images/notes-icon.svg'
+    - label: 'Faq'
+      icon: 'images/notes-icon.svg'
+  details:
+    title: 'Some of the ideas gravitating around the project are (but not limited) to:'
+    list:
+      - 'Software development'
+      - 'People interested in connecting the art piece to the blockchain'
+      - 'Sound & light interactivity, based on transactions / blocks being created on blockchains'
+      - 'Free Form Architecture'
+      - 'Video-mapping'
+      - 'Artificial Intelligence'
+      - 'Interactive and generative art'
+      - 'Mathematics/ Geometric Computing'
+      - 'Cosmology'
+      - 'Art DAO'
+      - 'Network Topology'
+      - 'Art and culture in the blockchain space'
+
 ---
 
 {{#extend "base"}}
@@ -75,8 +101,8 @@ structure:
     {{> components/structure structure=frontMatter.structure}}
 
     {{> components/team}}
-    
-    {{> components/get-involved}}
+
+    {{> components/get-involved getInvolved=frontMatter.getInvolved}}
 
  {{/content}}
 {{/extend}}
