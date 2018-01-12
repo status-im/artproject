@@ -40,7 +40,7 @@
   &__profile {
     margin-bottom: 20px;
 
-    @for $i from 1 through 8 {
+    @for $i from 1 through length($profile-colors) {
       &:nth-of-type(#{$i}) {
         color: nth($profile-colors, $i);
       }
