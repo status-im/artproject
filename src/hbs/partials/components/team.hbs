@@ -1,5 +1,28 @@
 <section class="section team">
-  {{#each team.profiles as |profile| }}
-    {{> components/profile profile=profile}}
-  {{/each}}
+  <div class="team__container">
+
+    {{> components/heading
+      text=team.header
+      class="team__header"
+    }}
+
+    <div class="team__quote">
+      <blockquote class="team__quote__text">{{ team.quote.text }}</blockquote>
+      <p class="team__quote__author">- {{ team.quote.author }}</p>
+    </div>
+
+    <div class="team__profiles">
+      {{#each team.profiles as |profile| }}
+        {{> components/profile
+          class="team__profile"
+          profile=profile
+        }}
+      {{/each}}
+    </div>
+
+    <div class="team__counter">{{ team.counter }}</div>
+
+    <div class="team__link">{{ team.nextSectionLink }}</div>
+
+  </div>
 </section>

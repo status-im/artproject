@@ -1,11 +1,18 @@
-<div class="profile">
-  <!-- profile image -->
-  <h6>
-    {{#if profile.location }}
-      {{ profile.location }}
-    {{else}}
-      undisclosed
-    {{/if}}
-  </h6>
-  <h3>{{ profile.name }}</h3>
+<div class="profile {{ class }}">
+
+  <figure class="profile__image">
+
+  </figure>
+
+  <div class="profile__detail">
+    <h6 class="profile__location">
+      {{#if profile.location }}
+        {{ profile.location }}
+      {{else}}
+        undisclosed
+      {{/if}}
+    </h6>
+
+    <h3 class="profile__name">{{ profile.name }}</h3>
+  </div>
 </div>

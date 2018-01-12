@@ -1,4 +1,49 @@
 .team {
+  $profile-colors: (
+    $color-tangerine,
+    $color-fuchsia-blue,
+    $color-citron,
+    $color-corn,
+    $color-red,
+    $color-fuchsia-pink,
+    $color-scampi,
+    $color-turquoise
+  );
+
+  padding: 20px 0;
   color: $color-white;
   background-color: $color-black;
+
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__quote {
+    margin-bottom: 20px;
+    font-weight: 300;
+
+    &__text {
+      margin: 0;
+    }
+
+    &__author {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  &__profile {
+    margin-bottom: 20px;
+
+    @for $i from 1 through 8 {
+      &:nth-of-type(#{$i}) {
+        color: nth($profile-colors, $i);
+      }
+    }
+  }
 }
