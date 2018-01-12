@@ -159,7 +159,7 @@ body {
       position: absolute;
       top: 70%;
       left: 70%;
-      float: initial;
+      z-index: 1;
     }
 
     &__scroll {
