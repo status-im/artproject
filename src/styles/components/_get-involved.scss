@@ -4,9 +4,50 @@
 
   &__container {
     @include container;
+
+    position: relative;
   }
 
   &__description {
     font-weight: 300;
+  }
+
+  &__counter {
+    font-size: 24px;
+  }
+
+  &__content,
+  &__header,
+  &__description,
+  &__button,
+  &__details-title {
+    margin-top: 24px;
+  }
+
+  &__button + &__button {
+    margin-top: 20px;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    list-style: none;
+  }
+
+  &__list-item {
+    position: relative;
+    margin: 5px 0;
+
+    &::before {
+      position: absolute;
+      top: .5em;
+      left: -.5em;
+      display: block;
+      width: 4px;
+      height: 4px;
+      border: 1px solid $color-white;
+      border-radius: 50%;
+      content: '';
+    }
   }
 }

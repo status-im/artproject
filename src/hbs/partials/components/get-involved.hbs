@@ -22,22 +22,19 @@
     </div>
 
     <div class="get-involved__details">
-      <div class="get-involved__counter">
-        {{ getInvolved.counter }}
-      </div>
-
       <div class="get-involved__details-title text--small">
         {{ getInvolved.details.title }}
       </div>
 
-      <div>
-        <ul>
-          {{#each getInvolved.details.list as |listItem|}}
-            <li>{{ listItem }}</li>
-          {{/each}}
-        </ul>
-      </div>
+      <ul class="get-involved__list text-small">
+        {{#each getInvolved.details.list as |listItem|}}
+          <li class="get-involved__list-item">{{ listItem }}</li>
+        {{/each}}
+      </ul>
 
+      <div class="get-involved__counter">
+        {{ getInvolved.counter }}
+      </div>
     </div>
 
   </div>
