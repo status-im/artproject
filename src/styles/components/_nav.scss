@@ -1,0 +1,126 @@
+.nav {
+  height: 100%;
+  margin-left: auto;
+
+  &.is-active {
+    display: block;
+    background-color: $color-gray;
+
+    .nav__list {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &.is-activated {
+    .nav__list {
+      transition: $duration * 2 transform $ease-in-out-quint;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 60px);
+    font-size: 12px;
+    background-color: $color-navy;
+    transform: translate3d(0, -100%, 0);
+    box-shadow: 0 0 15px 0 rgba($color-black, .1);
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    letter-spacing: 2px;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 2.5vh 0;
+    font-family: 'Work Sans';
+    font-weight: 700;
+    color: $color-white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__link::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: calc(100% + 20px);
+    height: 3px;
+    background-color: $color-white;
+    content: '';
+    transform: translate(-50%, 0) scaleX(0);
+    transition: transform $duration $ease-out-cubic;
+  }
+
+  &__link:hover::after,
+  &__link.is-active::after {
+    transform: translate(-50%, 0) scaleX(1);
+  }
+
+  &__item--sub-nav {
+    flex-direction: column;
+    cursor: pointer;
+  }
+}
+
+@media #{$screen-sm} {
+  .nav {
+    &__list {
+      top: 78px;
+      height: auto;
+      padding: 60px 0;
+    }
+
+    &__link {
+      padding: 10px 0;
+    }
+  }
+}
+
+@media #{$screen-md} {
+  .nav {
+    &__list {
+      position: relative;
+      top: auto;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      padding: 0;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      box-shadow: none;
+      transition: 0s all ease;
+    }
+
+    &__item:last-child {
+      padding-right: 0;
+    }
+
+    &__link::after {
+      width: calc(100% - 20px);
+    }
+
+    &__link {
+      position: static;
+      flex-direction: row;
+    }
+  }
+}

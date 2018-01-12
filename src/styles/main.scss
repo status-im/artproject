@@ -1,0 +1,29 @@
+// *** Styles ***
+@import 'sanitize.css';
+
+@import './base/settings';
+@import './base/colors';
+
+@import './utils/easings';
+@import './utils/animations';
+@import './utils/grid';
+@import './utils/ui';
+
+@import './base/core';
+@import './base/typography';
+@import './base/mixins';
+@import './base/common';
+
+@import './components/header';
+@import './components/burger-button';
+@import './components/nav';
+@import './components/section';
+@import './components/get-involved';
+@import './components/hero';
+@import './components/introduction';
+@import './components/project';
+@import './components/structure';
+@import './components/team';
+@import './components/footer';
+@import './components/button';
+@import './components/heading';

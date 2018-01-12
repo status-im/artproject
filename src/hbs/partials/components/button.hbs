@@ -1,0 +1,18 @@
+<button
+  class="button {{ class }}"
+  style="
+    {{#if outlineColor }}
+      color: {{ outlineColor }};
+    {{/if}}
+    {{#if backgroundColor }}
+      background-color: {{ backgroundColor }};
+    {{/if}}
+  "
+>
+  {{#if icon}}
+    <div class="button__icon">
+      {{icon}}
+    </div>
+  {{/if}}
+  {{label}}
+</button>

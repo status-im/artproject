@@ -1,0 +1,25 @@
+.text {
+  &--small {
+    font-size: 18px;
+
+    @media #{$screen-xlg} {
+      font-size: 20px;
+    }
+  }
+
+  &--medium {
+    font-size: 18px;
+
+    @media #{$screen-lg} {
+      font-size: 24px;
+    }
+  }
+
+  &--large {
+    font-size: 20px;
+
+    @media #{$screen-xlg} {
+      font-size: 26px;
+    }
+  }
+}

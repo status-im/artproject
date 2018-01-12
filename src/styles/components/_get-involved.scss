@@ -1,0 +1,12 @@
+.get-involved {
+  color: $color-white;
+  background-color: $color-gray;
+
+  &__container {
+    @include container;
+  }
+
+  &__description {
+    font-weight: 300;
+  }
+}

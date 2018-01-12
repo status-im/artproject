@@ -1,0 +1,71 @@
+{
+  "rootUrl": "/",
+  "header": {
+    "links": [
+      {
+        "url": "#introduction",
+        "title": "introduction"
+      },
+      {
+        "url": "#project",
+        "title": "project"
+      },
+      {
+        "url": "#structure",
+        "title": "structure"
+      },
+      {
+        "url": "#team",
+        "title": "team"
+      },
+      {
+        "url": "#get-involved",
+        "title": "get involved"
+      },
+      {
+        "url": "#events",
+        "title": "events"
+      },
+      {
+        "url": "#blog",
+        "title": "blog"
+      }
+    ]
+  },
+  "footer": {
+    "links": [
+      {
+        "url": "",
+        "title": "Truebit"
+      },
+      {
+        "url": "",
+        "title": "Medium"
+      },
+      {
+        "url": "",
+        "title": "Telegram"
+      },
+      {
+        "url": "",
+        "title": "Newsletter"
+      },
+      {
+        "url": "",
+        "title": "Project Proposal"
+      },
+      {
+        "url": "",
+        "title": "Floor Plans"
+      },
+      {
+        "url": "",
+        "title": "Collaborator Guidelines"
+      },
+      {
+        "url": "",
+        "title": "FAQ"
+      }
+    ]
+  }
+}

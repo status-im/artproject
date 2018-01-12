@@ -1,0 +1,15 @@
+<footer class="footer">
+  <ul class="footer__list">
+    {{#each data.footer.links as |link|}}
+      <li class="footer__list-item">
+        <a class="footer__link" href="{{ link.url }}">{{ link.title }}</a>
+      </li>
+    {{/each}}
+  </ul>
+  <div class="footer__attribution">
+    <span>Designed by:</span>
+    <a href="http://empire.studio/" rel="noopener" target="_blank">
+      <strong>EMPIRE</strong>
+    </a>
+  </div>
+</footer>
