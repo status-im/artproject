@@ -1,3 +1,5 @@
 <section class="section team">
-
+  {{#each team.profiles as |profile| }}
+    {{> components/profile profile=profile}}
+  {{/each}}
 </section>
