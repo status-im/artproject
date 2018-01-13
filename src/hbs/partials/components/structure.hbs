@@ -13,28 +13,31 @@
           label=structure.button.label
           outlineColor="#ff3a00"
           backgroundColor="#000"
+          icon=(svg structure.button.icon)
         }}
       </div>
     </div>
+
     <div class="structure__details">
       <div class="text--small">
         {{#each structure.content.upper as |paragraph|}}
           <p>{{paragraph}}</p>
         {{/each}}
       </div>
-      <div class="text--medium">
+      <div class="text--large">
         {{#each structure.content.lower as |paragraph|}}
           <p>{{paragraph}}</p>
         {{/each}}
       </div>
 
       <div class="structure__counter">
-        {{ structure.counter }}
+        {{ structure.counterText }}
       </div>
 
-      <div class="structure__link">
-        {{ structure.nextSectionLink }}
-      </div>
+      {{> components/next-section-link
+        class="structure__link"
+        name=structure.nextSectionLink
+      }}
     </div>
   </div>
 </section>

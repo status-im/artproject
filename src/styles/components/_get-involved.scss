@@ -1,3 +1,123 @@
 .get-involved {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - #{$header-height--desktop});
+  color: $color-white;
   background-color: $color-gray;
+
+  &__container {
+    @include container;
+
+    position: relative;
+  }
+
+  &__wrapper {
+    @media #{$screen-sm} {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    @media #{$screen-sm} {
+      width: 50%;
+      padding-right: 25px;
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+
+    @media #{$screen-md} {
+      font-size: 24px;
+    }
+  }
+
+  &__buttons {
+    @media #{$screen-sm} {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media #{$screen-md} {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+
+  &__button + &__button {
+    margin-top: 20px;
+
+    @media #{$screen-md} {
+      margin: 0 0 0 10px;
+    }
+  }
+
+  &__details {
+    max-width: 470px;
+
+    @media #{$screen-sm} {
+      width: 50%;
+    }
+  }
+
+  &__details-title {
+    font-weight: 500;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    list-style: none;
+  }
+
+  &__list-item {
+    position: relative;
+    margin: 5px 0;
+
+    &::before {
+      position: absolute;
+      top: .5em;
+      left: -.5em;
+      display: block;
+      width: 4px;
+      height: 4px;
+      border: 1px solid $color-white;
+      border-radius: 50%;
+      content: '';
+    }
+
+    @media #{$screen-sm} {
+      font-size: 18px;
+    }
+  }
+
+  &__counter {
+    font-size: 24px;
+
+    @media #{$screen-md} {
+      position: absolute;
+      top: 40px;
+      left: 700px;
+    }
+
+    @media #{$screen-lg} {
+      position: absolute;
+      top: 46px;
+      left: 800px;
+    }
+  }
+
+  &__link {
+    margin: 20px 0;
+  }
+
+  &__content,
+  &__header,
+  &__description,
+  &__button,
+  &__details,
+  &__details-title {
+    margin-top: 24px;
+  }
 }

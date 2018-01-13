@@ -110,10 +110,6 @@
       transition: 0s all ease;
     }
 
-    &__item:last-child {
-      padding-right: 0;
-    }
-
     &__link::after {
       width: calc(100% - 20px);
     }

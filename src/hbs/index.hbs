@@ -1,18 +1,6 @@
 ---
 title: 'Home'
 
-introduction:
-  header: 'Introduction —'
-  subheader: 'TrueBit, in collaboration with artist Jessica Angel, are creating an open source, massive public art installation connected to the blockchain in real time.'
-  content:
-    - 'This public structure will be the starting point for creative interactions and collaborations to happen with creatives from different parts of the world using the blockchain as a creative tool.'
-    - 'We are facing exciting times in the history of humanity, and this project will pay tribute to the greatness of this technology, while proposing a holistic approach to knowledge; where music, art, education, economics, mathematics and philosophy take place under the same roof.'
-
-  button:
-    label: 'Signup for newsletter'
-
-  nextSectionLink: 'Learn more about the project'
-
 hero:
   header:
     upper: '#Art'
@@ -27,9 +15,21 @@ hero:
     label: 'Telegram Community'
     icon: 'images/telegram-logo.svg'
   nextSectionLink: 'Scroll Down'
+  counterText: '01 - 06'
+
+introduction:
+  header: 'Introduction —'
+  subheader: '<a class="underline" href="https://truebit.io" rel="noopener" target="_blank">TrueBit</a>, in collaboration with artist <a class="underline" href="http://www.jessicaangelarts.com" rel="noopener" target="_blank">Jessica Angel</a>, are creating an open source, massive public art installation connected to the blockchain in real time.'
+  content:
+    - 'This public structure will be the starting point for creative interactions and collaborations to happen with creatives from different parts of the world using the blockchain as a creative tool.'
+    - 'We are facing exciting times in the history of humanity, and this project will pay tribute to the greatness of this technology, while proposing a holistic approach to knowledge; where music, art, education, economics, mathematics and philosophy take place under the same roof.'
+  button:
+    label: 'Signup for newsletter'
+  nextSectionLink: 'Learn more about the project ↓'
+  counterText: '02 - 06'
 
 project:
-  header: 'Project -'
+  header: 'Project —'
   subheader: 'This first art project proposes the visualization and experience of immersion inside the “dogetherium bridge”, an endeavour that TrueBit is undertaking to create a “bridge" between the Dogecoin and Ethereum blockchains.'
   content:
     - 'Using high impact, immersive and interactive art, in conjunction with the underlying coding and computational workings happening in the Doge-ETH bridge, this project aims to foster community, participation and reflections around the pioneering work in the blockchain ecosystem.'
@@ -51,15 +51,42 @@ structure:
   header: 'Structure —'
   button:
     label: 'Floor / Elevation Plans'
-    icon: 'images/telegram-logo.svg'
+    icon: 'images/file.svg'
   content:
     upper:
       - 'The starting point to conceptualize the public art structure is the Mobius bridge, a pedestrian bridge over the Avon, designed by Hakes Associates of Bristol, UK. We found this bridge to be remarkably interesting as it explores the structure of the Mobius strip, providing a connection between point A and B while maintaining a single, unified surface.'
       - 'The Mobius strip leads to the construction of a very interesting solid called the Klein Bottle. Imagine connecting the sides of a paper ring to come up with a donut shape. Similarly, imagine connecting the sides of a Mobius strip, you would end up with a Klein bottle.'
     lower:
       - 'The Klein bottle shares the same characteristics as the Mobius strip of having a unified surface. In addition, the Klein bottle provides an enclosed environment perfect for the development of a public programming schedule to take place inside of it. Hence, The public art structure will be a penetrable Klein bottle that symbolizes the bridge between the Dogecoin and Ethereum blockchains, connecting the outer side with the inner surface through the bottleneck pass way.'
-  nextSectionLink: 'Learn more about the team'
-  counter: '04 - 06'
+  nextSectionLink: 'Learn more about the team ↓'
+  counterText: '04 - 06'
+
+getInvolved:
+  header: 'Get Involved —'
+  description:
+  - 'We are looking to hear about your ideas, skills and passions. This project is about fostering collaborations with creators, thinkers, burners, makers, and people excited about technology and art. Get involved by communicating with the team (<a href="mailto:artproject@truebit.com">artproject@truebit.io</a>), sharing your vision and affiliation to these ideas. Anything counts as long as there is passion, rigor and commitment!'
+  buttons:
+    - label: 'Collaborator Guidelines'
+      icon: 'images/file.svg'
+    - label: 'Faq'
+      icon: 'images/file.svg'
+  details:
+    title: 'Some of the ideas gravitating around the project are (but not limited) to:'
+    list:
+      - 'Software development'
+      - 'People interested in connecting the art piece to the blockchain'
+      - 'Sound & light interactivity, based on transactions / blocks being created on blockchains'
+      - 'Free Form Architecture'
+      - 'Video-mapping'
+      - 'Artificial Intelligence'
+      - 'Interactive and generative art'
+      - 'Mathematics/ Geometric Computing'
+      - 'Cosmology'
+      - 'Art DAO'
+      - 'Network Topology'
+      - 'Art and culture in the blockchain space'
+  nextSectionLink: 'Learn more about our process →'
+  counterText: '06 - 06'
 
 ---
 
@@ -75,8 +102,8 @@ structure:
     {{> components/structure structure=frontMatter.structure}}
 
     {{> components/team}}
-    
-    {{> components/get-involved}}
+
+    {{> components/get-involved getInvolved=frontMatter.getInvolved}}
 
  {{/content}}
 {{/extend}}
