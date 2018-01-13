@@ -18,25 +18,25 @@ function setActiveClassNames() {
   });
 }
 
-function listenForActiveSection() {
-  const $sections = document.querySelectorAll(SECTION_SELECTOR);
-  const $header = document.querySelector(HEADER_SELECTOR);
+// function listenForActiveSection() {
+//   const $sections = document.querySelectorAll(SECTION_SELECTOR);
+//   const $header = document.querySelector(HEADER_SELECTOR);
 
-  document.addEventListener('scroll', () => {
-    const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-    const $sectionsArray = [...$sections];
-    const $activeSections = $sectionsArray.filter(($section) => {
-      return $section.offsetTop <= scrollPosition + $header.offsetHeight;
-    });
+//   document.addEventListener('scroll', () => {
+//     const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+//     const $sectionsArray = [...$sections];
+//     const $activeSections = $sectionsArray.filter(($section) => {
+//       return $section.offsetTop <= scrollPosition + $header.offsetHeight;
+//     });
 
-    const $activeSection = $activeSections[$activeSections.length - 1];
+//     const $activeSection = $activeSections[$activeSections.length - 1];
 
-    history.pushState(undefined, undefined, `#${$activeSection.id}`);
-  });
-}
+//     history.pushState(undefined, undefined, `#${$activeSection.id}`);
+//   });
+// }
 
 export default function init() {
-  listenForActiveSection();
+  // listenForActiveSection();
 
   return new SmoothScroll(LINKS_SELECTOR, {
     header: HEADER_SELECTOR,
