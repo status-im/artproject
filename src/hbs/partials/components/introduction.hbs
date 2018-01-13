@@ -6,34 +6,36 @@
       class="introduction__header"
     }}
 
-    <div class="introduction__subheader text--large">
-      {{{ introduction.subheader }}}
+    <div class="introduction__img">
+      {{svg 'images/introduction.svg' }}
     </div>
 
-    <div class="introduction__content">
-      <div class="introduction__paragraph text--small">
-        {{#each introduction.content as |paragraph|}}
-          <p>{{paragraph}}</p>
-        {{/each}}
+    <div class="introduction__wrapper">
+      <div class="introduction__subheader text--large">
+        {{{ introduction.subheader }}}
       </div>
 
-      <div class="introduction__img">
-        {{svg 'images/introduction.svg' }}
+      <div class="introduction__content">
+        <div class="introduction__paragraph text--small">
+          {{#each introduction.content as |paragraph|}}
+            <p>{{paragraph}}</p>
+          {{/each}}
+        </div>
       </div>
-    </div>
 
-    <div class="introduction__button">
-      {{> components/button
-        label=introduction.button.label
-        outlineColor="#fff"
-        backgroundColor="#000"
-      }}
-    </div>
+      <div class="introduction__button">
+        {{> components/button
+          label=introduction.button.label
+          outlineColor="#fff"
+          backgroundColor="#000"
+        }}
+      </div>
 
-    <div class="introduction__link">
-      <a href="#project">
-        {{ introduction.nextSectionLink }}
-      </a>
+      <div class="introduction__link">
+        <a href="#project">
+          {{ introduction.nextSectionLink }}
+        </a>
+      </div>
     </div>
   </div>
 </section>
