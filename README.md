@@ -22,7 +22,6 @@ Join us - the revolution will rendered artistically!
 * [Handlebars](http://handlebarsjs.com/) templates
 * ES6 support (provided by [Babel](https://babeljs.io/))
 * [Sass/SCSS](http://sass-lang.com/) support
-* Tests with [Mocha](https://mochajs.org/) and [Chai](http://chaijs.com/)
 
 ## Prerequisites
 You will need the following things properly installed on your computer.
