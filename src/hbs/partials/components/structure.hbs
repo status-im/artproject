@@ -31,12 +31,13 @@
       </div>
 
       <div class="structure__counter">
-        {{ structure.counter }}
+        {{ structure.counterText }}
       </div>
 
-      <div class="structure__link">
-        {{ structure.nextSectionLink }}
-      </div>
+      {{> components/next-section-link
+        class="structure__link"
+        name=structure.nextSectionLink
+      }}
     </div>
   </div>
 </section>
