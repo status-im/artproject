@@ -38,7 +38,32 @@
     font-size: 20px;
 
     @media #{$screen-md} {
+      position: absolute;
+      top: 0;
+      right: 0;
       font-size: 24px;
+      transform: rotate(90deg) translate(70%, 20%);
+      transform-origin: right center;
+    }
+  }
+
+  &__scroll {
+    display: none;
+
+    @media #{$screen-md} {
+      position: absolute;
+      top: 100px;
+      right: -18px;
+      display: block;
+      text-align: center;
+
+      &__text {
+        margin-bottom: 30px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transform: rotate(-90deg);
+      }
     }
   }
 
