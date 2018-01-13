@@ -1,0 +1,15 @@
+<div class="profile {{ class }}">
+  <div class="profile__container">
+    <figure class="profile__image-wrapper">
+      <div class="profile__image" style="background-image: url('{{ profile.image }}')"></div>
+    </figure>
+
+    <div class="profile__detail profile__detail--index-{{ index }}">
+      <h6 class="profile__location">
+        {{#if profile.location }} {{ profile.location }} {{else}} undisclosed {{/if}}
+      </h6>
+
+      <h3 class="profile__name">{{new-line profile.name }}</h3>
+    </div>
+  </div>
+</div>

@@ -16,7 +16,8 @@ $container-md: 940px;
 $container-lg: 1140px;
 $container-xlg: 1340px;
 
-$screen-xs: 'only screen and (min-width: 1px)';
+$screen-xxs: 'only screen and (min-width: 1px)';
+$screen-xs: 'only screen and (min-width: #{$xs})';
 $screen-sm: 'only screen and (min-width: #{$sm})';
 $screen-md: 'only screen and (min-width: #{$md})';
 $screen-lg: 'only screen and (min-width: #{$lg})';

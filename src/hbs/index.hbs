@@ -61,6 +61,36 @@ structure:
   nextSectionLink: 'Learn more about the team ↓'
   counterText: '04 - 06'
 
+team:
+  header: 'Team -'
+  quote:
+    text: '"Everything I do is some kind of modified borrowing from others who have been close to me either actually or virtually, and the virtual influences are amongst the most profound"'
+    author: 'Douglas Hofstadter'
+  profiles:
+    - name: 'Doge Doe'
+      image: 'images/dog-profile.png'
+    - location: 'New York'
+      name: 'Jessica Angel'
+      image: 'images/jessica-profile.png'
+    - name: 'Jason Teutsch'
+      image: 'images/jason-profile.png'
+    - location: 'Toronto'
+      name: 'Robbie Bent'
+      image: ''
+    - location: 'San Francisco'
+      name: 'Sina Habibian'
+      image: ''
+    - name: 'Emily Hunter'
+      image: ''
+    - name: 'Jane Doe'
+      image: ''
+    - location: 'Toronto'
+      name: 'Aqeel Mohammad'
+      image: ''
+
+  nextSectionLink: 'Learn more about getting involved ↓'
+  counter: '05 - 06'
+
 getInvolved:
   header: 'Get Involved —'
   description:
@@ -97,11 +127,11 @@ getInvolved:
 
     {{> components/introduction introduction=frontMatter.introduction}}
 
-    {{> components/project project=frontMatter.project }}
+    {{> components/project project=frontMatter.project}}
 
     {{> components/structure structure=frontMatter.structure}}
 
-    {{> components/team}}
+    {{> components/team team=frontMatter.team}}
 
     {{> components/get-involved getInvolved=frontMatter.getInvolved}}
 
