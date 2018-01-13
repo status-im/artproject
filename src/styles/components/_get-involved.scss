@@ -94,6 +94,22 @@
 
   &__counter {
     font-size: 24px;
+
+    @media #{$screen-md} {
+      position: absolute;
+      top: 40px;
+      left: 700px;
+    }
+
+    @media #{$screen-lg} {
+      position: absolute;
+      top: 46px;
+      left: 800px;
+    }
+  }
+
+  &__link {
+    margin: 20px 0;
   }
 
   &__content,

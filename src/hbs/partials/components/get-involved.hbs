@@ -34,17 +34,17 @@
             <li class="get-involved__list-item">{{ listItem }}</li>
           {{/each}}
         </ul>
-
-        <div class="get-involved__counter">
-          {{ getInvolved.counterText }}
-        </div>
-
-        {{> components/next-section-link
-          class="get-involved__link"
-          name=getInvolved.nextSectionLink
-        }}
       </div>
     </div>
+
+    <div class="get-involved__counter">
+      {{ getInvolved.counterText }}
+    </div>
+
+    {{> components/next-section-link
+      class="get-involved__link"
+      name=getInvolved.nextSectionLink
+    }}
 
   </div>
 </section>
