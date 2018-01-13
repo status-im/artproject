@@ -68,7 +68,7 @@
     z-index: -1;
     content: attr(data-title);
     transform: translate(-50%, -50%);
-    transition: transform .7s ease-out;
+    transition: transform .7s cubic-bezier(0, 1.54, .4, 1.7);
   }
 
   &__link::before {
@@ -79,24 +79,18 @@
     color: $color-blue;
   }
 
-  &__link:hover::before {
+  &__link:hover::before,
+  &__link.active::before {
     $transform-val: calc(-50% - #{$anim-size});
 
     transform: translate($transform-val, $transform-val);
   }
 
-  &__link:hover::after {
+  &__link:hover::after,
+  &__link.active::after {
     $transform-val: calc(-50% + #{$anim-size});
 
     transform: translate($transform-val, $transform-val);
-  }
-
-  &__link.active::before {
-    transform: translate(-50%, -50% + #{$anim-size});
-  }
-
-  &__link.active::after {
-    transform: translate(-50%, -50% + #{$anim-size * 2});
   }
 
   &__item--sub-nav {
