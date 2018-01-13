@@ -1,5 +1,6 @@
 import SmoothScroll from 'smooth-scroll';
 import gumshoe from 'gumshoe';
+import { closeNav } from './nav';
 
 const LINKS_SELECTOR = 'a[href^="#"]';
 const HEADER_SELECTOR = '.js-scroll-header';
@@ -7,8 +8,6 @@ const SCROLL_SPEED = 500;
 const ACTIVE_CLASS = 'active';
 
 function setActiveClassNames() {
-  gumshoe.destroy();
-
   const $links = document.querySelectorAll(LINKS_SELECTOR);
   const currentHash = location.hash;
 
@@ -47,7 +46,11 @@ export default function init() {
     header: HEADER_SELECTOR,
     speed: SCROLL_SPEED,
     easing: 'easeInOutQuad',
-    before: setActiveClassNames,
+    before: () => {
+      gumshoe.destroy();
+      closeNav();
+      setActiveClassNames();
+    },
     after: initGumshoe
   });
 }
