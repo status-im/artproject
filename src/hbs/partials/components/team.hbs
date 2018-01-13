@@ -1,4 +1,4 @@
-<section class="section team">
+<section class="section team" {{#if team.id}} id="{{team.id}}" {{/if}}>
   <div class="team__container">
 
     {{> components/heading
@@ -30,7 +30,7 @@
 
     {{> components/next-section-link
       class="team__link"
-      name=team.nextSectionLink
+      nextSection=team.nextSectionLink
     }}
 
   </div>

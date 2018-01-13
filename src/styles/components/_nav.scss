@@ -1,4 +1,6 @@
 .nav {
+  $anim-size: 2px;
+
   height: 100%;
   margin-left: auto;
 
@@ -58,21 +60,37 @@
     white-space: nowrap;
   }
 
-  &__link::after {
+  &__link::after,
+  &__link::before {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 50%;
-    width: calc(100% + 20px);
-    height: 3px;
-    background-color: $color-white;
-    content: '';
-    transform: translate(-50%, 0) scaleX(0);
-    transition: transform $duration $ease-out-cubic;
+    z-index: -1;
+    content: attr(data-title);
+    transform: translate(-50%, -50%);
+    transition: transform .7s cubic-bezier(0, 1.54, .4, 1.7);
+  }
+
+  &__link::before {
+    color: $color-red;
+  }
+
+  &__link::after {
+    color: $color-blue;
+  }
+
+  &__link:hover::before,
+  &__link.active::before {
+    $transform-val: calc(-50% - #{$anim-size});
+
+    transform: translate($transform-val, $transform-val);
   }
 
   &__link:hover::after,
-  &__link.is-active::after {
-    transform: translate(-50%, 0) scaleX(1);
+  &__link.active::after {
+    $transform-val: calc(-50% + #{$anim-size});
+
+    transform: translate($transform-val, $transform-val);
   }
 
   &__item--sub-nav {

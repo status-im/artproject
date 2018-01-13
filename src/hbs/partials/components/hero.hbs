@@ -1,4 +1,4 @@
-<section class="section hero">
+<section class="section hero" {{#if hero.id}} id="{{hero.id}}" {{/if}}>
   <div class="hero__canvas"></div>
   <h1 class="hero__header">
     <div class="hero__header--upper">{{ hero.header.upper }}</div>
@@ -25,9 +25,9 @@
       icon=(svg hero.button.icon width="24px" height="24px")
     }}
 
-    <a href="#" class="hero__scroll">
+    <a href="{{ hero.nextSectionLink.link }}" class="hero__scroll">
       {{svg 'images/arrow-down.svg' class="hero__scroll__icon"}}
-      <div class="hero__scroll__text">{{ hero.nextSectionLink }}</div>
+      <div class="hero__scroll__text">{{ hero.nextSectionLink.text }}</div>
     </a>
 
   </div>

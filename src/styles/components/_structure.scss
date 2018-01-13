@@ -1,7 +1,7 @@
 .structure {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  padding-top: 10px;
   color: $color-scarlet;
   background-color: $color-white;
 
@@ -88,6 +88,6 @@
   }
 
   @media #{$screen-sm} {
-    margin-top: 30px;
+    padding-top: 30px;
   }
 }

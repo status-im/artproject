@@ -1,4 +1,4 @@
-<section class="section get-involved">
+<section class="section get-involved" {{#if getInvolved.id}} id="{{getInvolved.id}}" {{/if}}>
   <div class="get-involved__container">
 
     {{> components/heading
@@ -43,7 +43,7 @@
 
     {{> components/next-section-link
       class="get-involved__link"
-      name=getInvolved.nextSectionLink
+      nextSection=getInvolved.nextSectionLink
     }}
 
   </div>

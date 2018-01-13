@@ -1,4 +1,4 @@
-<section class="section structure">
+<section class="section structure" {{#if structure.id}} id="{{structure.id}}" {{/if}}>
   <div class="structure__container">
     <div class="structure__content">
       {{> components/heading
@@ -36,7 +36,7 @@
 
       {{> components/next-section-link
         class="structure__link"
-        name=structure.nextSectionLink
+        nextSection=structure.nextSectionLink
       }}
     </div>
   </div>
