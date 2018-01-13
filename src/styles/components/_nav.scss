@@ -79,13 +79,15 @@
     color: $color-blue;
   }
 
-  &__link:hover::before {
+  &__link:hover::before,
+  &__link.active::before {
     $transform-val: calc(-50% - #{$anim-size});
 
     transform: translate($transform-val, $transform-val);
   }
 
-  &__link:hover::after {
+  &__link:hover::after,
+  &__link.active::after {
     $transform-val: calc(-50% + #{$anim-size});
 
     transform: translate($transform-val, $transform-val);

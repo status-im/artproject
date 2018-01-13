@@ -1,11 +1,11 @@
-<header class="header">
+<header class="header js-scroll-header">
   <div class="header__container">
     <a class="header-logo" href="{{data.rootUrl}}" title="artproject">
       {{svg 'images/logo.svg'}}
       <span class="header-logo__subtitle">ART PROJECT</span>
     </a>
 
-    {{> components/nav parentRouteName=parentRouteName}}
+    {{> components/nav}}
 
     {{> components/burger-button class="header__btn"}}
   </div>
