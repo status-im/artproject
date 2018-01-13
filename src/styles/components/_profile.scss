@@ -1,4 +1,12 @@
 .profile {
+  &__container {
+    @media #{$screen-lg} {
+      position: relative;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
+
   &__image-wrapper {
     display: flex;
     align-items: center;
@@ -82,5 +90,47 @@
         }
       }
     }
+
+    @media #{$screen-lg} {
+      &--index {
+        &-0 {
+          transform: translate(-20%, -100%);
+        }
+
+        &-1 {
+          top: 0;
+          transform: translate(80%, -20%);
+        }
+
+        &-2 {
+          transform: translate(-25%, 40%);
+        }
+
+        &-3 {
+          transform: translate(-20%, 50%);
+        }
+
+        &-4 {
+          transform: translate(20%, 45%);
+        }
+
+        &-5 {
+          transform: translate(55%, -60%);
+        }
+
+        &-6 {
+          transform: translate(-20%, 25%);
+        }
+
+        &-7 {
+          transform: translate(-30%, 40%);
+        }
+      }
+    }
+  }
+
+  @media #{$screen-lg} {
+    width: 33%;
+    max-width: initial;
   }
 }
