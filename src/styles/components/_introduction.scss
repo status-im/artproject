@@ -64,6 +64,21 @@
     }
   }
 
+  &__counter {
+    position: absolute;
+    top: 240px;
+    right: 60px;
+    font-size: 24px;
+
+    @media #{$screen-sm} {
+      top: 280px;
+    }
+
+    @media #{$screen-lg} {
+      top: 140px;
+    }
+  }
+
   &__wrapper {
     @media #{$screen-sm} {
       flex: 1 0 50%;
