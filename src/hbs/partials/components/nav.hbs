@@ -2,7 +2,12 @@
   <ul class="nav__list js-nav-list">
     {{#each data.header.links as |link|}}
       <li class="nav__item">
-        <a class="nav__link" href="{{link.url}}" {{#if link.inNewTab}}target="_blank" rel="noopener"{{/if}}>
+        <a
+          class="nav__link"
+          href="{{link.url}}"
+          data-title="{{link.title}}"
+          {{#if link.inNewTab}} target="_blank" rel="noopener"{{/if}}
+        >
           {{link.title}}
         </a>
       </li>
