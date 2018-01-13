@@ -68,7 +68,7 @@
     z-index: -1;
     content: attr(data-title);
     transform: translate(-50%, -50%);
-    transition: transform .7s cubic-bezier(0, 1.54, .4, 1.35);
+    transition: transform .7s cubic-bezier(0, 1.54, .4, 1.7);
   }
 
   &__link::before {
