@@ -63,6 +63,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "gumshoe": "github:cferdinandi/gumshoe",
     "sanitize.css": "^4.1.0",
     "smooth-scroll": "^12.1.5",
     "vanilla-tilt": "^1.4.1"
