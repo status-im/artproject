@@ -1,6 +1,7 @@
 .structure {
   display: flex;
   align-items: center;
+  min-height: calc(100vh - #{$header-height--desktop});
   margin-top: 10px;
   color: $color-scarlet;
   background-color: $color-white;
