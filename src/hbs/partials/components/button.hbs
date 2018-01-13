@@ -1,4 +1,4 @@
-<button
+<{{#if href}}a href={{href}} rel="noopener" target="_blank"{{else}}button{{/if}}
   class="button {{ class }}"
   style="
     {{#if outlineColor }}
@@ -15,4 +15,4 @@
     </div>
   {{/if}}
   {{label}}
-</button>
+</{{#if href}}a{{else}}button{{/if}}>
