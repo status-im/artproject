@@ -2,7 +2,9 @@
   <ul class="footer__list">
     {{#each data.footer.links as |link|}}
       <li class="footer__list-item">
-        <a class="footer__link" href="{{ link.url }}">{{ link.title }}</a>
+        <a class="footer__link" href="{{ link.url }}" rel="noopener" target="_blank">
+          {{ link.title }}
+        </a>
       </li>
     {{/each}}
   </ul>
