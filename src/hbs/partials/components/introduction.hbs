@@ -35,11 +35,11 @@
         }}
       </div>
 
-      <div class="introduction__link">
-        <a href="#project">
-          {{ introduction.nextSectionLink }}
-        </a>
-      </div>
+      {{> components/next-section-link
+        class="introduction__link"
+        name=introduction.nextSectionLink
+      }}
+
     </div>
   </div>
 </section>
