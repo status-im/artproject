@@ -16,15 +16,30 @@
 
   &__container {
     @include container;
+
+    position: relative;
   }
 
   &__header {
     margin-bottom: 20px;
+
+    @media #{$screen-md} {
+      position: absolute;
+      top: 42%;
+      z-index: 1;
+    }
+  }
+
+  &__counter {
+    font-size: 20px;
+
+    @media #{$screen-md} {
+      font-size: 24px;
+    }
   }
 
   &__quote {
     margin-bottom: 20px;
-    font-weight: 300;
 
     &__text {
       margin: 0;
@@ -35,14 +50,108 @@
       font-weight: 600;
       text-transform: uppercase;
     }
+
+    @media #{$screen-md} {
+      max-width: 40%;
+      font-size: 24px;
+      font-weight: 300;
+    }
+  }
+
+  &__profiles {
+    @media #{$screen-xs} {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
   }
 
   &__profile {
-    margin-bottom: 20px;
+    margin: 10px 0 25px;
+    text-align: center;
 
     @for $i from 1 through length($profile-colors) {
       &:nth-of-type(#{$i}) {
         color: nth($profile-colors, $i);
+      }
+    }
+
+    @media #{$screen-xs} {
+      width: calc(50% - 10px);
+    }
+
+    @media #{$screen-md} {
+      max-width: 250px;
+      margin: 40px 0;
+      text-align: left;
+
+      &:nth-of-type(1) {
+        transform: translate(30%, 0);
+      }
+
+      &:nth-of-type(2) {
+        transform: translate(20%, -55%);
+      }
+
+      &:nth-of-type(3) {
+        transform: translate(0, 10%);
+      }
+
+      &:nth-of-type(4) {
+        transform: translate(10%, 10%);
+      }
+
+      &:nth-of-type(5) {
+        transform: translate(5%, -40%);
+      }
+
+      &:nth-of-type(6) {
+        transform: translate(-10%, 5%);
+      }
+
+      &:nth-of-type(7) {
+        transform: translate(80%, 0%);
+      }
+
+      &:nth-of-type(8) {
+        transform: translate(-30%, 10%);
+      }
+    }
+
+    @media #{$screen-md} {
+      max-width: 250px;
+      margin: 30px 0;
+
+      &:nth-of-type(1) {
+        transform: translate(30%, 0);
+      }
+
+      &:nth-of-type(2) {
+        transform: translate(20%, -55%);
+      }
+
+      &:nth-of-type(3) {
+        transform: translate(0, 10%);
+      }
+
+      &:nth-of-type(4) {
+        transform: translate(10%, 10%);
+      }
+
+      &:nth-of-type(5) {
+        transform: translate(5%, -40%);
+      }
+
+      &:nth-of-type(6) {
+        transform: translate(-10%, 5%);
+      }
+
+      &:nth-of-type(7) {
+        transform: translate(80%, 0%);
+      }
+
+      &:nth-of-type(8) {
+        transform: translate(-30%, 10%);
       }
     }
   }

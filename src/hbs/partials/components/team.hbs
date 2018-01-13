@@ -14,6 +14,7 @@
     <div class="team__profiles">
       {{#each team.profiles as |profile| }}
         {{> components/profile
+          index=@index
           class="team__profile"
           profile=profile
         }}
