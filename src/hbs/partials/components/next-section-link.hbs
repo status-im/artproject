@@ -1,7 +1,8 @@
 <a
   href="{{ nextSection.link }}"
-  data-title="{{ nextSection.text }}"
   class="next-section-link {{class}}"
 >
-  {{ nextSection.text }}
+  <div class="next-section-link__wrapper" data-title="{{ nextSection.text }}">
+    {{ nextSection.text }}
+  </div>
 </a>
