@@ -20,6 +20,12 @@
   }
 
   &__header {
+    @media #{$screen-only-xs}, #{$screen-only-sm} {
+      .js-parallax {
+        @include disableTransform();
+      }
+    }
+
     @media #{$screen-md} {
       position: absolute;
       bottom: 100px;
@@ -55,6 +61,7 @@
   }
 
   &__images {
+    position: relative;
     padding-top: 10px;
 
     @media #{$screen-sm} {
@@ -75,6 +82,10 @@
   &__image {
     width: 100%;
     margin: 10px 0;
+
+    @media #{$screen-only-xs}, #{$screen-only-sm} {
+      @include disableTransform();
+    }
 
     @media #{$screen-sm} {
       width: 80%;
@@ -105,6 +116,7 @@
 
       &--1 {
         position: relative;
+        z-index: 1;
         width: 60%;
         margin: 0;
         margin-top: -25%;
@@ -112,6 +124,7 @@
       }
 
       &--2 {
+        z-index: 3;
         width: 70%;
         margin: 0;
       }
@@ -121,11 +134,17 @@
   &__button {
     margin: 10px 0;
 
+    @media #{$screen-only-xs}, #{$screen-only-sm} {
+      .js-parallax {
+        @include disableTransform();
+      }
+    }
+
     @media #{$screen-md} {
       position: absolute;
       top: 50%;
       left: 15%;
-      z-index: 2;
+      z-index: 5;
     }
   }
 
