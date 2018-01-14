@@ -2,22 +2,22 @@
   <div class="hero__canvas"></div>
 
     <h1 class="hero__header">
-      <div class="js-parallax" data-rellax-speed="2">
+      <div class="js-parallax" data-rellax-speed="4">
         <div class="hero__header--upper">{{ hero.header.upper }}</div>
       </div>
-      <div class="js-parallax" data-rellax-speed="1">
+      <div class="js-parallax" data-rellax-speed="2">
         <div class="hero__header--lower">{{ hero.header.lower }}</div>
       </div>
     </h1>
 
   <div class="hero__counter">
-    <div class="js-parallax" data-rellax-speed="-0.2">
+    <div class="js-parallax" data-rellax-speed="-0.5">
       {{ hero.counterText }}
     </div>
   </div>
 
   <div class="hero__bottom">
-    <div class="hero__detail js-parallax" data-rellax-speed="-0.15">
+    <div class="hero__detail js-parallax" data-rellax-speed="-0.2">
       <h3 class="hero__detail__title">{{ hero.eventsLabel }}</h3>
       {{#each hero.events as |event|}}
         <p class="hero__detail__event">
@@ -35,7 +35,7 @@
     }}
 
     <a href="{{ hero.nextSectionLink.link }}" class="hero__scroll">
-      <div class="js-parallax" data-rellax-speed="0.2">
+      <div class="js-parallax" data-rellax-speed="0.4">
         {{svg 'images/arrow-down.svg' class="hero__scroll__icon"}}
         <div class="hero__scroll__text" data-title="{{ hero.nextSectionLink.text }}">
           {{ hero.nextSectionLink.text }}

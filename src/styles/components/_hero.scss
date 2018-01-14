@@ -73,7 +73,7 @@ body {
   }
 
   &__scroll {
-    margin: 20px auto 0;
+    margin: 30px auto 0;
     font-size: 12px;
     font-weight: 700;
     text-align: center;
@@ -83,7 +83,7 @@ body {
     &__text {
       @include hoverDistortion;
 
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     &__icon {

@@ -1,3 +1,5 @@
+$scroll-offset: 10px;
+
 @mixin fade-in($duration: .2s) {
   opacity: 1;
   visibility: visible;
@@ -38,25 +40,21 @@
   transition: transform $duration $easing 0s, visibility 0s $easing $duration;
 }
 
-// @keyframes hovering {
-
-// }
-
 @keyframes scrollDown {
   0% {
     transform: translateY(0);
   }
 
   10% {
-    transform: translateY(5px);
+    transform: translateY($scroll-offset);
   }
 
   15% {
-    transform: translateY(2px);
+    transform: translateY(#{$scroll-offset - $scroll-offset / 2});
   }
 
   25% {
-    transform: translateY(5px);
+    transform: translateY($scroll-offset);
   }
 
   50%,
