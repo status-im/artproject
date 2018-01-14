@@ -1,7 +1,16 @@
 .next-section-link {
+  @include hoverDistortion();
+
+  z-index: 1;
   display: block;
   font-family: $base-font-family;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
+
+  @media #{$screen-md} {
+    &:hover {
+      @include hoverDistortionActive();
+    }
+  }
 }
