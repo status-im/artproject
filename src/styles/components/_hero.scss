@@ -81,7 +81,17 @@ body {
     cursor: pointer;
 
     &__text {
+      @include hoverDistortion;
+
       margin-top: 15px;
+    }
+
+    &__icon {
+      animation: scrollDown 3.5s infinite;
+    }
+
+    &:hover &__text {
+      @include hoverDistortionActive;
     }
   }
 }

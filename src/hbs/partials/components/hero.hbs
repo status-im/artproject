@@ -37,7 +37,9 @@
     <a href="{{ hero.nextSectionLink.link }}" class="hero__scroll">
       <div class="js-parallax" data-rellax-speed="0.2">
         {{svg 'images/arrow-down.svg' class="hero__scroll__icon"}}
-        <div class="hero__scroll__text">{{ hero.nextSectionLink.text }}</div>
+        <div class="hero__scroll__text" data-title="{{ hero.nextSectionLink.text }}">
+          {{ hero.nextSectionLink.text }}
+        </div>
       </div>
     </a>
 
