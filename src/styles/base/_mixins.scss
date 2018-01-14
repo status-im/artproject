@@ -4,6 +4,10 @@
   text-transform: uppercase;
 }
 
+@mixin disableTransform() {
+  transform: none !important;
+}
+
 /* element must have data-title property */
 @mixin hoverDistortion() {
   position: relative;

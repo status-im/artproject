@@ -44,6 +44,7 @@ body {
     top: 25%;
     right: -20px;
     z-index: 1;
+    overflow: hidden;
     font-size: 24px;
     transform: rotate(-90deg);
   }
@@ -162,6 +163,7 @@ body {
       top: 30%;
       right: initial;
       left: 70%;
+      overflow: initial;
       transform-origin: left center;
     }
 
