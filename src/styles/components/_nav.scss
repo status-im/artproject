@@ -1,6 +1,6 @@
-.nav {
-  $anim-size: 2px;
+$_anim-size: 2px;
 
+.nav {
   height: 100%;
   margin-left: auto;
 
@@ -79,16 +79,14 @@
     color: $color-blue;
   }
 
-  &__link:hover::before,
   &__link.active::before {
-    $transform-val: calc(-50% - #{$anim-size});
+    $transform-val: calc(-50% - #{$_anim-size});
 
     transform: translate($transform-val, $transform-val);
   }
 
-  &__link:hover::after,
   &__link.active::after {
-    $transform-val: calc(-50% + #{$anim-size});
+    $transform-val: calc(-50% + #{$_anim-size});
 
     transform: translate($transform-val, $transform-val);
   }
@@ -135,6 +133,18 @@
     &__link {
       position: static;
       flex-direction: row;
+    }
+
+    &__link:hover::before {
+      $transform-val: calc(-50% - #{$_anim-size});
+
+      transform: translate($transform-val, $transform-val);
+    }
+
+    &__link:hover::after {
+      $transform-val: calc(-50% + #{$_anim-size});
+
+      transform: translate($transform-val, $transform-val);
     }
   }
 }

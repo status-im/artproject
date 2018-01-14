@@ -1,8 +1,10 @@
 import SmoothScroll from 'smooth-scroll';
+import gumshoe from 'gumshoe';
+import { closeNav } from './nav';
 
 const LINKS_SELECTOR = 'a[href^="#"]';
-const SECTION_SELECTOR = '.section';
 const HEADER_SELECTOR = '.js-scroll-header';
+const SCROLL_SPEED = 500;
 const ACTIVE_CLASS = 'active';
 
 function setActiveClassNames() {
@@ -18,30 +20,37 @@ function setActiveClassNames() {
   });
 }
 
-// function listenForActiveSection() {
-//   const $sections = document.querySelectorAll(SECTION_SELECTOR);
-//   const $header = document.querySelector(HEADER_SELECTOR);
+function initGumshoe() {
+  gumshoe.init({
+    selector: LINKS_SELECTOR,
+    selectorHeader: HEADER_SELECTOR,
+    activeClass: ACTIVE_CLASS,
+    callback: () => {
+      const activeLink = document.querySelector(`a.${ACTIVE_CLASS}`);
 
-//   document.addEventListener('scroll', () => {
-//     const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-//     const $sectionsArray = [...$sections];
-//     const $activeSections = $sectionsArray.filter(($section) => {
-//       return $section.offsetTop <= scrollPosition + $header.offsetHeight;
-//     });
-
-//     const $activeSection = $activeSections[$activeSections.length - 1];
-
-//     history.pushState(undefined, undefined, `#${$activeSection.id}`);
-//   });
-// }
+      if (activeLink && location.hash !== activeLink.hash) {
+        if (history.pushState) {
+          history.pushState(null, null, activeLink.hash);
+        } else {
+          location.hash = activeLink.hash;
+        }
+      }
+    }
+  });
+}
 
 export default function init() {
-  // listenForActiveSection();
+  initGumshoe();
 
   return new SmoothScroll(LINKS_SELECTOR, {
     header: HEADER_SELECTOR,
-    speed: 500,
+    speed: SCROLL_SPEED,
     easing: 'easeInOutQuad',
-    before: setActiveClassNames
+    before: () => {
+      gumshoe.destroy();
+      closeNav();
+      setActiveClassNames();
+    },
+    after: initGumshoe
   });
 }
