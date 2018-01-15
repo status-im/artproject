@@ -6,6 +6,27 @@
     }
   }
 
+  &__hovering {
+    @media #{$screen-md} {
+      // animation: hovering 8s infinite;
+    }
+  }
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-navy;
+    transform-origin: left center;
+    transition: transform .7s $ease-out-quint;
+
+    .active & {
+      transform: scaleX(0);
+    }
+  }
+
   &__image-wrapper {
     display: flex;
     align-items: center;
@@ -15,6 +36,7 @@
   }
 
   &__image {
+    position: relative;
     width: 100%;
     background-position: center center;
     background-size: cover;

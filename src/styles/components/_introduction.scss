@@ -20,7 +20,9 @@
   }
 
   &__header {
+    position: relative;
     margin: 30px 0;
+    transform: translate(0, 40px);
 
     @media #{$screen-sm} {
       flex: 0 1 100%;
@@ -99,6 +101,14 @@
 
   &__button {
     margin-bottom: 30px;
+
+    @media #{$screen-only-xs},
+      #{$screen-only-sm},
+      #{$screen-only-md} {
+      .js-parallax {
+        @include disableTransform();
+      }
+    }
 
     @media #{$screen-xlg} {
       position: absolute;

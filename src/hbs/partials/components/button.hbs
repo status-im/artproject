@@ -1,6 +1,10 @@
 <{{#if href}}a href={{href}} rel="noopener" target="_blank"{{else}}button{{/if}}
   class="button {{ class }}"
-  style="
+>
+  <div
+    class="button__wrapper js-parallax"
+    data-rellax-speed="{{ternary rellax-speed rellax-speed 0}}"
+    style="
     {{#if outlineColor }}
       color: {{ outlineColor }};
     {{/if}}
@@ -8,11 +12,12 @@
       background-color: {{ backgroundColor }};
     {{/if}}
   "
->
-  {{#if icon}}
-    <div class="button__icon">
-      {{icon}}
-    </div>
-  {{/if}}
-  {{label}}
+  >
+    {{#if icon}}
+      <div class="button__icon">
+        {{icon}}
+      </div>
+    {{/if}}
+    {{label}}
+  </div>
 </{{#if href}}a{{else}}button{{/if}}>

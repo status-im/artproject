@@ -125,6 +125,7 @@ gulp.task('hbs', () => {
           './src/hbs/helpers/repeat.js',
           './src/hbs/helpers/svg-icon.js',
           './src/hbs/helpers/new-line.js',
+          './src/hbs/helpers/ternary.js',
           './node_modules/handlebars-helpers/lib/fs.js',
           './node_modules/handlebars-helpers/lib/comparison.js',
           './node_modules/handlebars-helpers/lib/collection.js',

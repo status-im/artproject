@@ -10,9 +10,28 @@
     $color-turquoise
   );
 
+  position: relative;
   padding: 20px 0;
+  overflow: hidden;
   color: $color-white;
-  background-color: $color-black;
+
+  &__background {
+    position: fixed;
+    top: 20%;
+    z-index: -1;
+
+    &__image {
+      max-width: 100%;
+    }
+
+    @media #{$screen-sm} {
+      left: 20%;
+
+      &__image {
+        max-width: 50%;
+      }
+    }
+  }
 
   &__container {
     @include container;
@@ -25,12 +44,18 @@
 
     @media #{$screen-md} {
       position: absolute;
-      top: 42%;
+      top: 27%;
       z-index: 1;
     }
 
     @media #{$screen-lg} {
-      top: 46%;
+      top: 31%;
+    }
+
+    @media #{$screen-only-xs}, #{$screen-only-sm} {
+      .js-parallax {
+        @include disableTransform();
+      }
     }
   }
 
@@ -96,6 +121,16 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
+    }
+
+    @media #{$screen-only-xs}, #{$screen-only-sm} {
+      .js-parallax {
+        @include disableTransform();
+      }
+    }
+
+    @media #{$screen-md} {
+      transform: translateY(300px);
     }
   }
 

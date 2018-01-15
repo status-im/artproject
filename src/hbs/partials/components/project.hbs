@@ -5,6 +5,7 @@
     {{> components/heading
       text=project.header
       class="project__header"
+      rellax-speed="-0.2"
     }}
 
     <div class="project__wrapper">
@@ -20,16 +21,21 @@
           backgroundColor="#ff5301"
           label=project.button.label
           href=project.button.href
+          rellax-speed="0.8"
           icon=(svg project.button.icon)
         }}
       </div>
 
       <div class="project__images">
-        {{#each project.images as |imageSrc|}}
-          <img src={{imageSrc}} class="project__image project__image--{{@index}}" alt="" />
+        {{#each project.images as |image|}}
+          <img
+            src={{image.src}}
+            class="project__image project__image--{{@index}} js-parallax"
+            alt=""
+            data-rellax-speed="{{ image.parallax }}"
+          />
         {{/each}}
       </div>
-
 
     </div>
 

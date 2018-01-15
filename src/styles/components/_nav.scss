@@ -46,6 +46,8 @@ $_anim-size: 2px;
   }
 
   &__link {
+    @include hoverDistortion();
+
     position: relative;
     display: flex;
     align-items: center;
@@ -60,35 +62,8 @@ $_anim-size: 2px;
     white-space: nowrap;
   }
 
-  &__link::after,
-  &__link::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-    content: attr(data-title);
-    transform: translate(-50%, -50%);
-    transition: transform .7s cubic-bezier(0, 1.54, .4, 1.7);
-  }
-
-  &__link::before {
-    color: $color-red;
-  }
-
-  &__link::after {
-    color: $color-blue;
-  }
-
-  &__link.active::before {
-    $transform-val: calc(-50% - #{$_anim-size});
-
-    transform: translate($transform-val, $transform-val);
-  }
-
-  &__link.active::after {
-    $transform-val: calc(-50% + #{$_anim-size});
-
-    transform: translate($transform-val, $transform-val);
+  &__link.active {
+    @include hoverDistortionActive();
   }
 
   &__item--sub-nav {
@@ -130,21 +105,13 @@ $_anim-size: 2px;
       width: calc(100% - 20px);
     }
 
+    &__link:hover {
+      @include hoverDistortionActive();
+    }
+
     &__link {
       position: static;
       flex-direction: row;
-    }
-
-    &__link:hover::before {
-      $transform-val: calc(-50% - #{$_anim-size});
-
-      transform: translate($transform-val, $transform-val);
-    }
-
-    &__link:hover::after {
-      $transform-val: calc(-50% + #{$_anim-size});
-
-      transform: translate($transform-val, $transform-val);
     }
   }
 }

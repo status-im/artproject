@@ -44,6 +44,7 @@ body {
     top: 25%;
     right: -20px;
     z-index: 1;
+    overflow: hidden;
     font-size: 24px;
     transform: rotate(-90deg);
   }
@@ -73,7 +74,7 @@ body {
   }
 
   &__scroll {
-    margin: 20px auto 0;
+    margin: 30px auto 0;
     font-size: 12px;
     font-weight: 700;
     text-align: center;
@@ -81,7 +82,17 @@ body {
     cursor: pointer;
 
     &__text {
-      margin-top: 15px;
+      @include hoverDistortion;
+
+      margin-top: 20px;
+    }
+
+    &__icon {
+      animation: scrollDown 3.5s infinite;
+    }
+
+    &:hover &__text {
+      @include hoverDistortionActive;
     }
   }
 }
@@ -152,6 +163,7 @@ body {
       top: 30%;
       right: initial;
       left: 70%;
+      overflow: initial;
       transform-origin: left center;
     }
 

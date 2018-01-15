@@ -4,6 +4,7 @@
     {{> components/heading
       text=introduction.header
       class="introduction__header"
+      rellax-speed="0.7"
     }}
 
     <div class="introduction__img" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="400">
@@ -21,9 +22,11 @@
 
       <div class="introduction__content">
         <div class="introduction__paragraph text--small">
-          {{#each introduction.content as |paragraph|}}
-            <p>{{paragraph}}</p>
-          {{/each}}
+          <div class="js-parallax" data-rellax-speed="-0.1">
+            {{#each introduction.content as |paragraph|}}
+              <p>{{paragraph}}</p>
+            {{/each}}
+          </div>
         </div>
       </div>
 
@@ -32,6 +35,7 @@
           label=introduction.button.label
           outlineColor="#fff"
           backgroundColor="#000"
+          rellax-speed="0.5"
         }}
       </div>
 
