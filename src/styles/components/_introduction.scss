@@ -34,8 +34,10 @@
   &__img {
     margin-bottom: 20px;
 
-    svg {
-      width: 320px;
+    @media #{$screen-only-xs} {
+      svg {
+        width: 320px;
+      }
     }
 
     @media #{$screen-sm} {
