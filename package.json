@@ -64,6 +64,7 @@
   },
   "dependencies": {
     "gumshoe": "github:cferdinandi/gumshoe",
+    "in-view": "^0.6.1",
     "rellax": "^1.4.0",
     "sanitize.css": "^4.1.0",
     "smooth-scroll": "^12.1.5",
