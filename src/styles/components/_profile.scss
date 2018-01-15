@@ -6,6 +6,12 @@
     }
   }
 
+  &__hovering {
+    @media #{$screen-md} {
+      // animation: hovering 8s infinite;
+    }
+  }
+
   &__cover {
     position: absolute;
     top: 0;

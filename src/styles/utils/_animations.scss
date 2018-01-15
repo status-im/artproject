@@ -62,3 +62,21 @@ $scroll-offset: 10px;
     transform: translateY(0);
   }
 }
+
+@keyframes hovering {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(10px, 15px);
+  }
+
+  70% {
+    transform: translate(-12px, -7px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
