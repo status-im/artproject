@@ -10,7 +10,7 @@ $_button_transition: all .25s ease-in-out;
   transition: $_button_transition;
 
   &:hover {
-    color: $color-orange;
+    color: $color-scarlet;
   }
 
   &:hover &__icon {
