@@ -28,16 +28,19 @@
 
   &__header {
     position: absolute;
-    top: -19px;
-    right: -2px;
     z-index: 2;
+    transform: translate(-2px, -600px);
 
     @media #{$screen-sm} {
-      top: -38px;
+      transform: translate(-2px, -350px);
+    }
+
+    @media #{$screen-md} {
+      transform: translate(-2px, -280px);
     }
 
     @media #{$screen-lg} {
-      top: -44px;
+      transform: translate(-2px, -260px);
     }
   }
 
@@ -80,10 +83,18 @@
   &__button {
     margin-top: 10px;
 
+    @media #{$screen-only-xs}, #{$screen-only-sm} {
+      @include disableTransform();
+    }
+
     @media #{$screen-sm} {
       position: absolute;
       right: 18%;
       bottom: -20px;
+    }
+
+    @media #{$screen-md} {
+      transform: translateY(-100px);
     }
   }
 
