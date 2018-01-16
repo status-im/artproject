@@ -10,4 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   scroll();
   parallax();
   reveal();
+
+  CABLES.patch = new CABLES.Patch(
+    {
+      patchFile: 'klein.json',
+      prefixAssetPath: '',
+      glCanvasId: 'glcanvas'
+    });
 });

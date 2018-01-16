@@ -191,6 +191,7 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     './src/*.*',
+    './src/canvas/*.*',
     '!./src/.DS_Store',
     '!src/*.html'
   ], {
@@ -202,7 +203,7 @@ gulp.task('clean', () => {
   return del.sync('./dist');
 });
 
-gulp.task('serve', ['clean', 'hbs', 'styles', 'lint', 'scripts'], () => {
+gulp.task('serve', ['clean', 'hbs', 'extras', 'styles', 'lint', 'scripts'], () => {
   browserSync({
     notify: false,
     port: 9000,
