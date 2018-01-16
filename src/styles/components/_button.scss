@@ -5,25 +5,48 @@ $_button_transition: all .25s ease-in-out;
   font-family: 'Work Sans';
   font-size: 14px;
   font-weight: 600;
-  color: $color-white;
   text-transform: uppercase;
   transition: $_button_transition;
 
-  &:hover {
-    color: $color-scarlet;
+  &:hover &__wrapper {
+    &::before {
+      transform: scaleX(1);
+    }
   }
 
-  &:hover &__icon {
-    transform: scale(1);
+  &__text {
+    position: relative;
   }
 
   &__wrapper {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding: 16px;
+    color: $color-white;
     border: 2px solid currentColor;
+
+    &--black {
+      &::before {
+        background: $color-black !important;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: $color-orange;
+      content: close-quote;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform .5s $ease-out-quart;
+    }
   }
 
   &__icon {

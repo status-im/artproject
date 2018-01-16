@@ -2,7 +2,7 @@
   class="button {{ class }}"
 >
   <div
-    class="button__wrapper js-parallax"
+    class="button__wrapper js-parallax {{ternary blackBgHover "button__wrapper--black" ""}}"
     data-rellax-speed="{{ternary rellax-speed rellax-speed 0}}"
     style="{{#if backgroundColor }} background-color: {{ backgroundColor }}; {{/if}}"
   >
@@ -11,6 +11,6 @@
         {{icon}}
       </div>
     {{/if}}
-    {{label}}
+    <span class="button__text">{{label}}</span>
   </div>
 </{{#if href}}a{{else}}button{{/if}}>
