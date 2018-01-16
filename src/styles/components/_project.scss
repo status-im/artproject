@@ -134,6 +134,10 @@
   &__button {
     margin: 10px 0;
 
+    &:hover {
+      color: $color-black !important;
+    }
+
     @media #{$screen-only-xs}, #{$screen-only-sm} {
       .js-parallax {
         @include disableTransform();
