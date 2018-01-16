@@ -4,14 +4,16 @@ class Canvas {
       patchFile: 'assets/connect.json',
       prefixAssetPath: '',
       glCanvasId: 'connect',
-      glCanvasResizeToWindow: true
+      glCanvasResizeToWindow: true,
+      silent: true
     });
 
     CABLES.EMBED.addPatch(
       'klein',
       {
         patchFile: 'assets/klein.json',
-        prefixAssetPath: ''
+        prefixAssetPath: '',
+        silent: true
       }
     )
   }
