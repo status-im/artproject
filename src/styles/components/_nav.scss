@@ -88,6 +88,14 @@ $_anim-size: 2px;
 
 @media #{$screen-md} {
   .nav {
+    &__link:hover {
+      @include hoverDistortionActive();
+    }
+  }
+}
+
+@media #{$screen-lg} {
+  .nav {
     &__list {
       position: relative;
       top: auto;
@@ -103,10 +111,6 @@ $_anim-size: 2px;
 
     &__link::after {
       width: calc(100% - 20px);
-    }
-
-    &__link:hover {
-      @include hoverDistortionActive();
     }
 
     &__link {

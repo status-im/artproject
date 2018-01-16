@@ -40,9 +40,26 @@
   &__subtitle {
     position: absolute;
     right: 0;
-    bottom: -5px;
-    font-size: 12px;
+    bottom: -2px;
+    font-size: 10px;
     transform: translate(50%, 100%);
+
+    @media #{$screen-sm} {
+      bottom: -5px;
+      font-size: 12px;
+    }
+  }
+
+  svg {
+    width: 75px;
+    height: 15px;
+  }
+
+  @media #{$screen-sm} {
+    svg {
+      width: 125px;
+      height: 26px;
+    }
   }
 }
 
@@ -50,14 +67,9 @@
   .header {
     height: $header-height--desktop;
   }
-
-  .header-logo__img {
-    width: 110px;
-    height: 37px;
-  }
 }
 
-@media #{$screen-md} {
+@media #{$screen-lg} {
   .header {
     &::after,
     &__btn {
