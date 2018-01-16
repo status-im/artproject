@@ -28,10 +28,17 @@ body {
     font-family: $title-font-family;
     font-size: 36px;
     text-align: center;
+    pointer-events: none;
     transform: translate(-50%, -50%);
 
+    &--upper,
+    &--lower {
+      display: inline-flex;
+      line-height: 1;
+    }
+
     &--upper {
-      transform: translate(-35%, 0);
+      transform: translate(-65%, 10%);
     }
 
     &--lower {
@@ -147,7 +154,7 @@ body {
       font-size: 130px;
 
       &--upper {
-        transform: translate(-30%, 20%);
+        transform: translate(-60%, 30%);
       }
 
       &--lower {
@@ -200,7 +207,7 @@ body {
       font-size: 170px;
 
       &--upper {
-        transform: translate(-33%, 20%);
+        transform: translate(-70%, 30%);
       }
 
       &--lower {
