@@ -199,11 +199,19 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
+gulp.task('canvas_assets', () => {
+  return gulp.src([
+    './src/canvas/assets/*.*',
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist/assets'));
+});
+
 gulp.task('clean', () => {
   return del.sync('./dist');
 });
 
-gulp.task('serve', ['clean', 'hbs', 'extras', 'styles', 'lint', 'scripts'], () => {
+gulp.task('serve', ['clean', 'hbs', 'canvas_assets', 'extras', 'styles', 'lint', 'scripts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -248,7 +256,7 @@ gulp.task('test:watch', ['lint:test', 'test'], () => {
   });
 });
 
-gulp.task('build', ['clean', 'lint', 'html', 'fonts', 'extras', 'images'], () => {
+gulp.task('build', ['clean', 'lint', 'html', 'fonts', 'canvas_assets', 'extras', 'images'], () => {
   return gulp.src('dist/**/*').pipe($.size({
     title: 'build',
     gzip: true

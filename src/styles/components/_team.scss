@@ -18,19 +18,8 @@
   &__background {
     position: fixed;
     top: 20%;
+    right: 10%;
     z-index: -1;
-
-    &__image {
-      max-width: 100%;
-    }
-
-    @media #{$screen-sm} {
-      left: 20%;
-
-      &__image {
-        max-width: 50%;
-      }
-    }
   }
 
   &__container {

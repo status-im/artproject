@@ -11,10 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
   parallax();
   reveal();
 
-  CABLES.patch = new CABLES.Patch(
-    {
-      patchFile: 'klein.json',
-      prefixAssetPath: '',
-      glCanvasId: 'glcanvas'
-    });
+  CABLES.patch = new CABLES.Patch({
+    patchFile: 'assets/connect.json',
+    prefixAssetPath: '',
+    glCanvasId: 'connect',
+    glCanvasResizeToWindow: true
+  });
+
+  CABLES.patch = new CABLES.Patch({
+    patchFile: 'assets/klein.json',
+    prefixAssetPath: '',
+    glCanvasId: 'klein',
+    glCanvasResizeToWindow: true
+  });
 });
