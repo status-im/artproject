@@ -4,14 +4,7 @@
   <div
     class="button__wrapper js-parallax"
     data-rellax-speed="{{ternary rellax-speed rellax-speed 0}}"
-    style="
-    {{#if outlineColor }}
-      color: {{ outlineColor }};
-    {{/if}}
-    {{#if backgroundColor }}
-      background-color: {{ backgroundColor }};
-    {{/if}}
-  "
+    style="{{#if backgroundColor }} background-color: {{ backgroundColor }}; {{/if}}"
   >
     {{#if icon}}
       <div class="button__icon">

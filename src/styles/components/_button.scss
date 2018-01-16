@@ -1,10 +1,21 @@
+$_button_transition: all .25s ease-in-out;
+
 .button {
   width: 100%;
   font-family: 'Work Sans';
   font-size: 14px;
   font-weight: 600;
-  color: white;
+  color: $color-white;
   text-transform: uppercase;
+  transition: $_button_transition;
+
+  &:hover {
+    color: $color-orange;
+  }
+
+  &:hover &__icon {
+    transform: scale(1);
+  }
 
   &__wrapper {
     display: inline-flex;
@@ -17,6 +28,8 @@
 
   &__icon {
     margin-right: 10px;
+    transform: scale(.8);
+    transition: $_button_transition;
   }
 
   @media #{$screen-sm} {

@@ -78,7 +78,11 @@
 
   &__button {
     margin-top: 10px;
-    color: $color-scarlet;
+    color: $color-scarlet !important;
+
+    &:hover {
+      color: $color-blue !important;
+    }
 
     @media #{$screen-sm} {
       position: absolute;

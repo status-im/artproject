@@ -8,14 +8,12 @@
 
       <div class="structure__image"></div>
 
-      <div class="structure__button">
-        {{> components/button
-          label=structure.button.label
-          outlineColor="#ff3a00"
-          backgroundColor="#000"
-          icon=(svg structure.button.icon)
-        }}
-      </div>
+      {{> components/button
+        label=structure.button.label
+        class="structure__button"
+        backgroundColor="#000"
+        icon=(svg structure.button.icon)
+      }}
     </div>
 
     <div class="structure__details">
