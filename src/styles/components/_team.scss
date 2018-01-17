@@ -36,18 +36,12 @@
 
     @media #{$screen-md} {
       position: absolute;
-      top: 27%;
+      top: 44%;
       z-index: 1;
     }
 
     @media #{$screen-lg} {
       top: 31%;
-    }
-
-    @media #{$screen-only-xs}, #{$screen-only-sm} {
-      .js-parallax {
-        @include disableTransform();
-      }
     }
   }
 
@@ -115,13 +109,7 @@
       justify-content: space-between;
     }
 
-    @media #{$screen-only-xs}, #{$screen-only-sm} {
-      .js-parallax {
-        @include disableTransform();
-      }
-    }
-
-    @media #{$screen-md} {
+    @media #{$screen-lg} {
       transform: translateY(300px);
     }
   }

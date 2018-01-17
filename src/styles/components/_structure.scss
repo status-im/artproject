@@ -29,15 +29,6 @@
   &__header {
     position: absolute;
     z-index: 2;
-    transform: translate(-2px, -600px);
-
-    @media #{$screen-sm} {
-      transform: translate(-2px, -350px);
-    }
-
-    @media #{$screen-md} {
-      transform: translate(-2px, -280px);
-    }
 
     @media #{$screen-lg} {
       transform: translate(-2px, -260px);
@@ -82,10 +73,6 @@
 
   &__button {
     margin-top: 10px;
-
-    @media #{$screen-only-xs}, #{$screen-only-sm} {
-      @include disableTransform();
-    }
 
     @media #{$screen-sm} {
       position: absolute;

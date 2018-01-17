@@ -20,12 +20,6 @@
   }
 
   &__header {
-    @media #{$screen-only-xs}, #{$screen-only-sm} {
-      .js-parallax {
-        @include disableTransform();
-      }
-    }
-
     @media #{$screen-md} {
       position: absolute;
       bottom: 100px;
@@ -83,10 +77,6 @@
     width: 100%;
     margin: 10px 0;
 
-    @media #{$screen-only-xs}, #{$screen-only-sm} {
-      @include disableTransform();
-    }
-
     @media #{$screen-sm} {
       width: 80%;
       max-width: 250px;
@@ -133,12 +123,6 @@
 
   &__button {
     margin: 10px 0;
-
-    @media #{$screen-only-xs}, #{$screen-only-sm} {
-      .js-parallax {
-        @include disableTransform();
-      }
-    }
 
     @media #{$screen-md} {
       position: absolute;
