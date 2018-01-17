@@ -28,12 +28,24 @@
   text-decoration: underline;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .js-reveal-block {
   position: relative;
 
   &.js-reveal-text::before {
     transform: scaleX(0) !important;
     transform-origin: right center;
+  }
+
+  &.js-reveal-orange::before {
+    background-color: $color-orange;
+  }
+
+  &.js-reveal-light::before {
+    background-color: $color-tangerine;
   }
 
   > * {

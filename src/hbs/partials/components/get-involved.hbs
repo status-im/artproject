@@ -3,6 +3,7 @@
 
     {{> components/heading
       text=getInvolved.header
+      orangeReveal=true
       class="get-involved__header"
     }}
 
@@ -15,6 +16,7 @@
         <div class="get-involved__buttons">
           {{#each getInvolved.buttons as |button|}}
             {{> components/button
+              orangeReveal=true
               class="get-involved__button"
               label=button.label
               icon=(svg button.icon)
