@@ -18,8 +18,11 @@
   &__background {
     position: fixed;
     top: 20%;
-    right: 10%;
     z-index: -1;
+
+    @media #{$screen-md} {
+      right: 10%;
+    }
   }
 
   &__container {
