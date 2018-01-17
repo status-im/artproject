@@ -22,7 +22,7 @@ class Reveal {
     inView(REVEAL_BLOCK_SELECTOR)
       .on('enter', (el) => {
         const randNum = Math.floor(Math.random() * 30) + 1;
-        const timeout = 20 * randNum;
+        const timeout = 10 * randNum;
         setTimeout(() => el.classList.add(ACTIVE_CLASS), timeout);
       });
 

@@ -4,6 +4,7 @@
 
     {{> components/heading
       text=project.header
+      lightReveal=true
       class="project__header"
       rellax-speed="-0.2"
     }}
@@ -20,6 +21,7 @@
           class="project__button"
           backgroundColor="#ff5301"
           blackBgHover="true"
+          orangeReveal=true
           label=project.button.label
           href=project.button.href
           rellax-speed="0.8"
@@ -29,12 +31,12 @@
 
       <div class="project__images">
         {{#each project.images as |image|}}
-          <img
-            src={{image.src}}
-            class="project__image project__image--{{@index}} js-parallax"
-            alt=""
+          <div
+            class="js-reveal-block project__image project__image--{{@index}} js-parallax"
             data-rellax-speed="{{ image.parallax }}"
-          />
+          >
+            <img src={{image.src}} alt="" />
+          </div>
         {{/each}}
       </div>
 
