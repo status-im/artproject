@@ -32,12 +32,12 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    background-color: $color-white;
   }
 
   &__image {
     position: relative;
     width: 100%;
+    background-color: $color-white;
     background-position: center center;
     background-size: cover;
 

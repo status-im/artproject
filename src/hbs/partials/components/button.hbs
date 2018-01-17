@@ -1,16 +1,19 @@
 <{{#if href}}a href={{href}} rel="noopener" target="_blank"{{else}}button{{/if}}
   class="button {{ class }}"
 >
-  <div
-    class="button__wrapper js-parallax {{ternary blackBgHover "button__wrapper--black" ""}}"
+  <div class="js-reveal-block {{ternary orangeReveal "js-reveal-orange" ""}} js-parallax"
     data-rellax-speed="{{ternary rellax-speed rellax-speed 0}}"
-    style="{{#if backgroundColor }} background-color: {{ backgroundColor }}; {{/if}}"
   >
-    {{#if icon}}
-      <div class="button__icon">
-        {{icon}}
-      </div>
-    {{/if}}
-    <span class="button__text">{{label}}</span>
+    <div
+      class="button__wrapper {{ternary blackBgHover "button__wrapper--black" ""}}"
+      style="{{#if backgroundColor }} background-color: {{ backgroundColor }}; {{/if}}"
+    >
+      {{#if icon}}
+        <div class="button__icon">
+          {{icon}}
+        </div>
+      {{/if}}
+      <span class="button__text">{{label}}</span>
+    </div>
   </div>
 </{{#if href}}a{{else}}button{{/if}}>
