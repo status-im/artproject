@@ -1,6 +1,7 @@
 import Rellax from 'rellax';
 
 const PARALLAX_CLASS = '.js-parallax';
+const PARALLAX_BREAKPOINT = 1200;
 
 function initializeRellax() {
   return new Rellax(PARALLAX_CLASS, {
@@ -14,14 +15,17 @@ function initializeRellax() {
 
 export default function init() {
   let rellax;
-  initializeRellax();
+
+  if (window.innerWidth > PARALLAX_BREAKPOINT) {
+    initializeRellax();
+  }
 
   window.addEventListener('resize', () => {
     const width = window.innerWidth;
 
-    if (width >= 1200 && rellax === undefined) {
+    if (width >= PARALLAX_BREAKPOINT && rellax === undefined) {
       rellax = initializeRellax();
-    } else if (rellax && rellax.destroy && width < 1200) {
+    } else if (rellax && rellax.destroy && width < PARALLAX_BREAKPOINT) {
       rellax.destroy();
       rellax = undefined;
     }
