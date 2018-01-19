@@ -1,5 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import inView from 'in-view';
+import ScrollReveal from 'scrollreveal';
 
 const ACTIVE_CLASS = 'active';
 const REVEAL_PROFILE_SELECTOR = '.js-profile';
@@ -9,12 +10,22 @@ class Reveal {
   init() {
     this.revealProfiles();
     this.revealBlocks();
+    this.revealText();
   }
 
   revealProfiles() {
     inView.offset(200);
     inView(REVEAL_PROFILE_SELECTOR)
       .on('enter', el => el.classList.add(ACTIVE_CLASS));
+  }
+
+  revealText() {
+    ScrollReveal().reveal('.js-sr', {
+      scale: 1,
+      distance: '30px',
+      duration: 600,
+      viewOffset: { bottom: 50 },
+    });
   }
 
   revealBlocks() {

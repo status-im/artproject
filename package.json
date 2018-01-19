@@ -67,6 +67,7 @@
     "in-view": "^0.6.1",
     "rellax": "^1.4.0",
     "sanitize.css": "^4.1.0",
+    "scrollreveal": "^3.3.6",
     "smooth-scroll": "^12.1.5",
     "vanilla-tilt": "^1.4.1"
   }

@@ -11,10 +11,10 @@
 
     <div class="project__wrapper">
       <div class="project__content text--medium">
-        <div class="project__subheader">{{ project.subheader }}</div>
+        <div class="project__subheader js-sr">{{ project.subheader }}</div>
 
         {{#each project.content as |paragraph|}}
-          <p>{{ paragraph }}</p>
+          <p class="js-sr">{{ paragraph }}</p>
         {{/each}}
 
         {{> components/button

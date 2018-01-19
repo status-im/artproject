@@ -9,7 +9,7 @@
 
     <div class="get-involved__wrapper">
       <div class="get-involved__content">
-        <div class="get-involved__description text--medium">
+        <div class="get-involved__description text--medium js-sr">
           {{{ getInvolved.description }}}
         </div>
 
@@ -26,11 +26,11 @@
       </div>
 
       <div class="get-involved__details">
-        <div class="get-involved__details-title text--small">
+        <div class="get-involved__details-title text--small js-sr">
           {{ getInvolved.details.title }}
         </div>
 
-        <ul class="get-involved__list text-small">
+        <ul class="get-involved__list text-small js-sr">
           {{#each getInvolved.details.list as |listItem|}}
             <li class="get-involved__list-item">{{ listItem }}</li>
           {{/each}}
