@@ -1,5 +1,11 @@
 <section class="section hero" {{#if hero.id}} id="{{hero.id}}" {{/if}}>
     <div id="klein" class="hero__canvas">
+      <div class="hero__canvas-info hero__canvas-info--desktop">
+        {{ hero.canvas.info.desktop }}
+      </div>
+      <div class="hero__canvas-info hero__canvas-info--mobile">
+        {{ hero.canvas.info.mobile }}
+      </div>
     </div>
 
     <h1 class="hero__header">

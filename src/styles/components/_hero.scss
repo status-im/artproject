@@ -15,7 +15,28 @@ body {
     z-index: 1;
     width: 100%;
     height: 65vh;
-    //background-color: $color-orange;
+  }
+
+  &__canvas-info {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+
+    &--mobile {
+      display: block;
+
+      @media #{$screen-md} {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media #{$screen-md} {
+        display: block;
+      }
+    }
   }
 
   &__header {
