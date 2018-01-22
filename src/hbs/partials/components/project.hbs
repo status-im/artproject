@@ -42,7 +42,9 @@
 
     </div>
 
-    <div class="project__counter">{{ project.counterText }}</div>
+    <div class="project__counter">
+      <div class="js-sr">{{ project.counterText }}</div>
+    </div>
 
     {{> components/next-section-link
       class="project__link"
