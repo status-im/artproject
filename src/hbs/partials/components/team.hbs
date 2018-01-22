@@ -27,11 +27,15 @@
       {{/each}}
     </div>
 
-    <div class="team__counter">{{ team.counter }}</div>
+    <div class="team__counter">
+      <div class="js-sr">{{ team.counter }}</div>
+    </div>
 
     <div class="team__scroll">
-      <p class="team__scroll__text">scroll</p>
-      {{svg 'images/arrow-down.svg'}}
+      <div class="js-sr">
+        <p class="team__scroll__text">scroll</p>
+        {{svg 'images/arrow-down.svg'}}
+      </div>
     </div>
 
     {{> components/next-section-link
