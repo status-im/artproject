@@ -19,8 +19,11 @@ body {
 
   &__canvas-info {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 10px;
+    font-size: .7em;
+    font-weight: 600;
+    text-transform: uppercase;
 
     &--mobile {
       display: block;
