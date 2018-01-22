@@ -1,12 +1,14 @@
 <div class="profile {{ class }}">
   <div class="profile__container">
-    <figure
-      class="profile__image-wrapper js-parallax js-profile js-reveal-block"
-      data-rellax-speed="{{ternary profile.parallax.image profile.parallax.image 0}}"
-    >
-      <div class="profile__image" style="background-image: url('{{ profile.image }}')">
-      </div>
-    </figure>
+    <div class="js-sr">
+      <figure
+        class="profile__image-wrapper js-parallax js-profile"
+        data-rellax-speed="{{ternary profile.parallax.image profile.parallax.image 0}}"
+      >
+        <div class="profile__image" style="background-image: url('{{ profile.image }}')">
+        </div>
+      </figure>
+    </div>
 
     <div class="profile__detail profile__detail--index-{{ index }}">
       <div class="js-parallax" data-rellax-speed="{{ternary profile.parallax.description profile.parallax.description 0}}">
