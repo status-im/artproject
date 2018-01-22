@@ -9,10 +9,10 @@
     }}
 
     <div class="introduction__img" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="400">
-      {{svg 'images/introduction.svg' }}
+      <div class="js-sr">{{svg 'images/introduction.svg' }}</div>
 
       <div class="introduction__counter">
-        {{ introduction.counterText }}
+        <div class="js-sr">{{ introduction.counterText }}</div>
       </div>
     </div>
 
