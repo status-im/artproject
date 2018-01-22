@@ -23,7 +23,7 @@ class Reveal {
     ScrollReveal().reveal('.js-sr', {
       scale: 1,
       distance: '30px',
-      duration: 600,
+      duration: 1500,
       viewOffset: { bottom: 50 },
     });
   }
