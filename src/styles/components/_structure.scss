@@ -72,6 +72,7 @@
   }
 
   &__button {
+    z-index: 10;
     margin-top: 10px;
 
     @media #{$screen-sm} {
