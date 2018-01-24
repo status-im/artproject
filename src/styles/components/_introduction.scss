@@ -88,6 +88,10 @@
       flex: 1 0 50%;
       max-width: 50%;
     }
+
+    @media #{$screen-xlg} {
+      margin: 0 auto;
+    }
   }
 
   &__subheader {
@@ -111,6 +115,7 @@
     @media #{$screen-xlg} {
       position: absolute;
       top: 65%;
+      left: 25px;
     }
   }
 
