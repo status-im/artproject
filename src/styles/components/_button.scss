@@ -1,6 +1,7 @@
 $_button_transition: all .25s ease-in-out;
 
 .button {
+  display: inline-block;
   width: 100%;
 
   &,
