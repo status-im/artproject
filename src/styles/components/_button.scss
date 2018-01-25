@@ -2,13 +2,17 @@ $_button_transition: all .25s ease-in-out;
 
 .button {
   width: 100%;
-  font-family: 'Work Sans';
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: $_button_transition;
 
-  &:hover &__wrapper {
+  &,
+  &__hover-trigger {
+    font-family: 'Work Sans';
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: $_button_transition;
+  }
+
+  &__hover-trigger:hover &__wrapper {
     &::before {
       transform: scaleX(1);
     }

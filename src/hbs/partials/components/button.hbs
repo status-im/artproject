@@ -1,7 +1,6 @@
-<{{#if href}}a href={{href}} rel="noopener" target="_blank"{{else}}button{{/if}}
-  class="button {{ class }}"
->
-  <div class="js-reveal-block {{ternary orangeReveal "js-reveal-orange" ""}} js-parallax"
+<div class="button {{ class }}">
+  <{{#if href}}a href={{href}} rel="noopener" target="_blank"{{else}}button{{/if}}
+    class="button__hover-trigger js-reveal-block {{ternary orangeReveal "js-reveal-orange" ""}} js-parallax"
     data-rellax-speed="{{ternary rellax-speed rellax-speed 0}}"
   >
     <div
