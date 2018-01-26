@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="362" height="380" viewBox="0 0 362 380">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: blue;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1042" y="929" width="362" height="380" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="1042" y="929" width="362" height="380" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzYyIiBoZWlnaHQ9IjM4MCIgdmlld0JveD0iMCAwIDM2MiAzODAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjcmFkaWFsLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0icmFkaWFsLWdyYWRpZW50IiBjeD0iMTgxIiBjeT0iMTkwIiByPSIyNDMuNTYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJyZWQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjIyNSIgc3RvcC1jb2xvcj0iI2YwZiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuNDk1IiBzdG9wLWNvbG9yPSJibHVlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC43MzUiIHN0b3AtY29sb3I9ImFxdWEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxLjAwNSIgc3RvcC1jb2xvcj0ibGltZSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEuMjYiIHN0b3AtY29sb3I9IiNmZjAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxLjUiIHN0b3AtY29sb3I9InJlZCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMzYyIiBoZWlnaHQ9IjM4MCIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Polygon_1" data-name="Polygon 1" class="cls-1" d="M1340.57,1185.03l-205.25,123.98-93.33-165.98,93.74-144.576,144.64-69.462,123.64,123.578Z" transform="translate(-1042 -929)"/>
+</svg>

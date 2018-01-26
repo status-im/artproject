@@ -1,0 +1,47 @@
+<section class="section team" {{#if team.id}} id="{{team.id}}" {{/if}}>
+  <div class="team__background">
+    <canvas id="connect"></canvas>
+  </div>
+
+  <div class="team__container js-parallax-scene">
+
+    {{> components/heading
+      text=team.header
+      orangeReveal=true
+      class="team__header"
+      rellax-speed="-0.5"
+    }}
+
+    <div class="team__quote js-sr">
+      <blockquote class="team__quote__text">{{ team.quote.text }}</blockquote>
+      <p class="team__quote__author">- {{ team.quote.author }}</p>
+    </div>
+
+    <div class="team__profiles">
+      {{#each team.profiles as |profile| }}
+        {{> components/profile
+          index=@index
+          class="team__profile"
+          profile=profile
+        }}
+      {{/each}}
+    </div>
+
+    <div class="team__counter">
+      <div class="js-sr">{{ team.counter }}</div>
+    </div>
+
+    <div class="team__scroll">
+      <div class="js-sr">
+        <p class="team__scroll__text">scroll</p>
+        {{svg 'images/arrow-down.svg'}}
+      </div>
+    </div>
+
+    {{> components/next-section-link
+      class="team__link"
+      nextSection=team.nextSectionLink
+    }}
+
+  </div>
+</section>

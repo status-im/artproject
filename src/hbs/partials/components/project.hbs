@@ -1,0 +1,56 @@
+<section class="section project" {{#if project.id}} id="{{project.id}}" {{/if}}>
+
+  <div class="project__container">
+
+    {{> components/heading
+      text=project.header
+      lightReveal=true
+      class="project__header"
+      rellax-speed="-0.2"
+    }}
+
+    <div class="project__wrapper">
+      <div class="project__content text--medium">
+        <div class="project__subheader js-sr">{{ project.subheader }}</div>
+
+        {{#each project.content as |paragraph|}}
+          <p class="js-sr">{{ paragraph }}</p>
+        {{/each}}
+
+        {{> components/button
+          class="project__button"
+          backgroundColor="#ff5301"
+          blackBgHover="true"
+          orangeReveal=true
+          label=project.button.label
+          href=project.button.href
+          rellax-speed="0.8"
+          icon=(svg project.button.icon)
+        }}
+      </div>
+
+      <div class="project__images">
+        {{#each project.images as |image|}}
+          <div
+            class="js-reveal-block project__image project__image--{{@index}} js-parallax"
+            data-rellax-speed="{{ image.parallax }}"
+          >
+            <img src={{image.src}} alt="" />
+          </div>
+        {{/each}}
+      </div>
+
+    </div>
+
+    <div class="project__counter">
+      <div class="js-sr">{{ project.counterText }}</div>
+    </div>
+
+    {{> components/next-section-link
+      class="project__link"
+      nextSection=project.nextSectionLink
+    }}
+
+  </div>
+
+</section>

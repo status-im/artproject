@@ -1,0 +1,19 @@
+.next-section-link {
+  display: block;
+  font-family: $base-font-family;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &__wrapper {
+    @include hoverDistortion();
+
+    z-index: 1;
+
+    @media #{$screen-md} {
+      &:hover {
+        @include hoverDistortionActive();
+      }
+    }
+  }
+}

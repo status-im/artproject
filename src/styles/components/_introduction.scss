@@ -1,0 +1,152 @@
+.introduction {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: $color-black;
+
+  &__container {
+    @include container;
+
+    position: relative;
+
+    @media #{$screen-sm} {
+      display: flex;
+      flex-flow: row-reverse wrap;
+    }
+
+    @media #{$screen-lg} {
+      flex-flow: row wrap;
+    }
+  }
+
+  &__header {
+    position: relative;
+    margin: 30px 0;
+
+    @media #{$screen-sm} {
+      flex: 0 1 100%;
+    }
+
+    @media #{$screen-lg} {
+      margin: 80px 0;
+      transform: translate(0, 40px);
+    }
+  }
+
+  &__img {
+    margin-bottom: 20px;
+
+    @media #{$screen-only-xs} {
+      svg {
+        width: 320px;
+      }
+    }
+
+    @media #{$screen-sm} {
+      flex: 1 0 50%;
+      max-width: 50%;
+
+      svg {
+        width: 100%;
+      }
+    }
+
+    @media #{$screen-md} {
+      flex: initial;
+      margin-left: auto;
+    }
+
+    @media #{$screen-lg} {
+      position: absolute;
+      top: 10%;
+      right: 25px;
+    }
+
+    @media #{$screen-xlg} {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    top: 240px;
+    right: 60px;
+    font-size: 24px;
+
+    @media #{$screen-sm} {
+      top: 280px;
+    }
+
+    @media #{$screen-lg} {
+      top: 140px;
+    }
+  }
+
+  &__wrapper {
+    @media #{$screen-sm} {
+      flex: 1 0 50%;
+      max-width: 50%;
+    }
+
+    @media #{$screen-xlg} {
+      margin: 0 auto;
+    }
+  }
+
+  &__subheader {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__button {
+    margin-bottom: 30px;
+
+    @media #{$screen-only-lg} {
+      .js-parallax {
+        @include disableTransform();
+      }
+    }
+
+    @media #{$screen-xlg} {
+      position: absolute;
+      top: 65%;
+      left: 25px;
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__subheader,
+  &__paragraph {
+    @media #{$screen-lg} {
+      max-width: 780px;
+    }
+
+    @media #{$screen-xlg} {
+      max-width: 680px;
+      transform: translateX(60%);
+    }
+  }
+
+  &__subheader,
+  &__paragraph,
+  &__link {
+    margin-bottom: 30px;
+
+    @media #{$screen-lg} {
+      margin-bottom: 45px;
+    }
+
+    @media #{$screen-xlg} {
+      margin-bottom: 60px;
+    }
+  }
+}

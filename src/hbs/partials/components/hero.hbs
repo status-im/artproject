@@ -1,0 +1,59 @@
+<section class="section hero" {{#if hero.id}} id="{{hero.id}}" {{/if}}>
+    <div id="klein" class="hero__canvas">
+      <div class="hero__canvas-info hero__canvas-info--desktop js-sr">
+        {{ hero.canvas.info.desktop }}
+      </div>
+      <div class="hero__canvas-info hero__canvas-info--mobile js-sr">
+        {{ hero.canvas.info.mobile }}
+      </div>
+    </div>
+
+    <h1 class="hero__header">
+      <div class="js-parallax" data-rellax-speed="4">
+        <div class="hero__header--upper js-reveal-block"><span>{{ hero.header.upper }}</span></div>
+      </div>
+      <div class="js-parallax" data-rellax-speed="2">
+        <div class="hero__header--lower js-reveal-block"><span>{{ hero.header.lower }}</span></div>
+      </div>
+    </h1>
+
+  <div class="hero__counter">
+    <div class="js-parallax" data-rellax-speed="-0.5">
+      <div class="js-sr">{{ hero.counterText }}</div>
+    </div>
+  </div>
+
+  <div class="hero__bottom">
+    <div class="hero__detail js-parallax" data-rellax-speed="-0.2">
+      <h3 class="hero__detail__title js-sr">{{ hero.eventsLabel }}</h3>
+      <div class="js-sr">
+        {{#each hero.events as |event|}}
+          <p class="hero__detail__event">
+            {{ event.text }},
+            <strong class="hero__detail__city">{{ event.city }}</strong>
+          </p>
+        {{/each}}
+      </div>
+    </div>
+
+    {{> components/button
+      label=hero.button.label
+      orangeReveal=true
+      class="hero__button"
+      icon=(svg hero.button.icon width="24px" height="24px")
+    }}
+
+    <a href="{{ hero.nextSectionLink.link }}" class="hero__scroll">
+      <div class="js-parallax" data-rellax-speed="0.4">
+        <div class="js-sr">
+          {{svg 'images/arrow-down.svg' class="hero__scroll__icon"}}
+          <div class="hero__scroll__text" data-title="{{ hero.nextSectionLink.text }}">
+            {{ hero.nextSectionLink.text }}
+          </div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+</section>

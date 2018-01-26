@@ -1,0 +1,47 @@
+<section class="section structure" {{#if structure.id}} id="{{structure.id}}" {{/if}}>
+  <div class="structure__container">
+    <div class="structure__content">
+      {{> components/heading
+        rellax-speed="-1.2"
+        text=structure.header
+        orangeReveal=true
+        class="structure__header"
+      }}
+
+      <div class="js-reveal-block">
+        <div class="structure__image" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="900"></div>
+      </div>
+
+      {{> components/button
+        label=structure.button.label
+        class="structure__button"
+        backgroundColor="#000"
+        orangeReveal=true
+        rellax-speed="-0.4"
+        icon=(svg structure.button.icon)
+      }}
+    </div>
+
+    <div class="structure__details">
+      <div class="text--small js-sr">
+        {{#each structure.content.upper as |paragraph|}}
+          <p>{{paragraph}}</p>
+        {{/each}}
+      </div>
+      <div class="text--large js-sr">
+        {{#each structure.content.lower as |paragraph|}}
+          <p>{{paragraph}}</p>
+        {{/each}}
+      </div>
+
+      <div class="structure__counter">
+        <div class="js-sr">{{ structure.counterText }}</div>
+      </div>
+
+      {{> components/next-section-link
+        class="structure__link"
+        nextSection=structure.nextSectionLink
+      }}
+    </div>
+  </div>
+</section>

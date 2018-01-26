@@ -1,0 +1,92 @@
+.structure {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  color: $color-scarlet;
+  background-color: $color-white;
+
+  &__container {
+    @include container;
+
+    position: relative;
+
+    @media #{$screen-lg} {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__content {
+    position: relative;
+    height: 100%;
+    margin-top: 30px;
+
+    @media #{$screen-lg} {
+      width: 50%;
+    }
+  }
+
+  &__header {
+    position: absolute;
+    z-index: 2;
+
+    @media #{$screen-lg} {
+      transform: translate(-2px, -260px);
+    }
+  }
+
+  &__details {
+    padding-right: 20px;
+    font-weight: 300;
+    color: $color-black;
+
+    @media #{$screen-sm} {
+      margin-top: 60px;
+    }
+
+    @media #{$screen-lg} {
+      width: 50%;
+      margin-top: 0;
+    }
+  }
+
+  &__counter {
+    font-size: 20px;
+    font-weight: 400;
+    color: $color-scarlet;
+
+    @media #{$screen-sm} {
+      margin: 30px 0;
+      font-size: 24px;
+    }
+  }
+
+  &__link {
+    margin: 20px 0;
+  }
+
+  &__image {
+    max-width: 100%;
+    padding-bottom: 95%;
+    background: url('../images/structure.jpg') no-repeat center center / cover;
+  }
+
+  &__button {
+    z-index: 10;
+    margin-top: 10px;
+
+    @media #{$screen-sm} {
+      position: absolute;
+      right: 18%;
+      bottom: -20px;
+    }
+
+    @media #{$screen-md} {
+      transform: translateY(-100px);
+    }
+  }
+
+  @media #{$screen-sm} {
+    padding-top: 30px;
+  }
+}

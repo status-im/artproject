@@ -15,3 +15,32 @@ You can find out more by watching the video below and joining the upcoming meetu
 Is simply somewhere to keep the #ArtProject website for now and create bounties for any and all of the technical work we will require in order to make this the single greatest and most mind-boggling installation the crypto-world has ever seen!
 
 Join us - the revolution will rendered artistically!
+
+# Development
+
+## Setup
+* [Handlebars](http://handlebarsjs.com/) templates
+* ES6 support (provided by [Babel](https://babeljs.io/))
+* [Sass/SCSS](http://sass-lang.com/) support
+
+## Prerequisites
+You will need the following things properly installed on your computer.
+* [Git](http://git-scm.com/)
+* [Node.js](http://nodejs.org/) (with NPM)
+* [Gulp](http://gulpjs.com/)
+
+## Installation
+* `git clone git@github.com:status-im/artproject.git` this repository
+* change into the new directory
+* `npm install`
+
+## Running / Development
+* `npm start` or `npm run start` to serve templates
+* Visit your app at [http://localhost:9000](http://localhost:9000).
+
+### Building
+* `npm run build` to build templates
+
+## Testing
+* `npm run test` to run tests once
+* `npm run test:watch` to run tests in watch mode

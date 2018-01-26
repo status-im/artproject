@@ -1,0 +1,51 @@
+<section class="section get-involved" {{#if getInvolved.id}} id="{{getInvolved.id}}" {{/if}}>
+  <div class="get-involved__container">
+
+    {{> components/heading
+      text=getInvolved.header
+      orangeReveal=true
+      class="get-involved__header"
+    }}
+
+    <div class="get-involved__wrapper">
+      <div class="get-involved__content">
+        <div class="get-involved__description text--medium js-sr">
+          {{{ getInvolved.description }}}
+        </div>
+
+        <div class="get-involved__buttons">
+          {{#each getInvolved.buttons as |button|}}
+            {{> components/button
+              orangeReveal=true
+              class="get-involved__button"
+              label=button.label
+              icon=(svg button.icon)
+            }}
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="get-involved__details">
+        <div class="get-involved__details-title text--small js-sr">
+          {{ getInvolved.details.title }}
+        </div>
+
+        <ul class="get-involved__list text-small js-sr">
+          {{#each getInvolved.details.list as |listItem|}}
+            <li class="get-involved__list-item">{{ listItem }}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="get-involved__counter">
+      <div class="js-sr">{{ getInvolved.counterText }}</div>
+    </div>
+
+    {{> components/next-section-link
+      class="get-involved__link"
+      nextSection=getInvolved.nextSectionLink
+    }}
+
+  </div>
+</section>

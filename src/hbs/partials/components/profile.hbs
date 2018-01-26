@@ -1,0 +1,29 @@
+<div class="profile {{ class }}">
+  <div class="profile__container">
+    <div class="js-sr">
+      <figure
+        class="profile__image-wrapper js-parallax js-profile"
+        data-rellax-speed="{{ternary profile.parallax.image profile.parallax.image 0}}"
+      >
+        <div class="profile__image" style="background-image: url('{{ profile.image }}')">
+        </div>
+      </figure>
+    </div>
+
+    <div class="profile__detail profile__detail--index-{{ index }}">
+      <div class="js-parallax" data-rellax-speed="{{ternary profile.parallax.description profile.parallax.description 0}}">
+        <h6 class="profile__location">
+          <span class="js-reveal-block js-reveal-orange">
+            <span>{{#if profile.location }} {{ profile.location }} {{else}} undisclosed {{/if}}</span>
+          </span>
+        </h6>
+
+        <h3 class="profile__name">
+          <span class="inline-block js-reveal-block js-reveal-orange">
+            <span>{{new-line profile.name }}</span>
+          </span>
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>

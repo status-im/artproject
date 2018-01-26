@@ -1,0 +1,71 @@
+{
+  "rootUrl": "/",
+  "header": {
+    "links": [
+      {
+        "url": "#introduction",
+        "title": "introduction"
+      },
+      {
+        "url": "#project",
+        "title": "project"
+      },
+      {
+        "url": "#structure",
+        "title": "structure"
+      },
+      {
+        "url": "#team",
+        "title": "team"
+      },
+      {
+        "url": "#get-involved",
+        "title": "get involved"
+      },
+      {
+        "url": "#events",
+        "title": "events"
+      },
+      {
+        "url": "#blog",
+        "title": "blog"
+      }
+    ]
+  },
+  "footer": {
+    "links": [
+      {
+        "url": "https://truebit.io",
+        "title": "Truebit"
+      },
+      {
+        "url": "https://medium.com/artproject-truebit",
+        "title": "Medium"
+      },
+      {
+        "url": "https://t.me/cryptoartproject",
+        "title": "Telegram"
+      },
+      {
+        "url": "",
+        "title": "Newsletter"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1v-1R8juWUIptoO1ND8EZTh3zTcRJPkmG/view",
+        "title": "Project Proposal"
+      },
+      {
+        "url": "",
+        "title": "Floor Plans"
+      },
+      {
+        "url": "",
+        "title": "Collaborator Guidelines"
+      },
+      {
+        "url": "",
+        "title": "FAQ"
+      }
+    ]
+  }
+}
