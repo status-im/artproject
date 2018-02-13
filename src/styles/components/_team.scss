@@ -164,6 +164,14 @@
       &:nth-of-type(8) {
         transform: translate(-30%, 10%);
       }
+
+      &:nth-of-type(9) {
+        transform: translate(10%, 40%);
+      }
+
+      &:nth-of-type(10) {
+        transform: translate(20%, 20%);
+      }
     }
 
     @media #{$screen-lg} {
@@ -182,7 +190,7 @@
       }
 
       &:nth-of-type(4) {
-        transform: translate(10%, 60%);
+        transform: translate(10%, 80%);
       }
 
       &:nth-of-type(5) {
@@ -195,11 +203,19 @@
       }
 
       &:nth-of-type(7) {
-        transform: translate(95%, 0%);
+        transform: translate(85%, 0%);
       }
 
       &:nth-of-type(8) {
-        transform: translate(40%, 10%);
+        transform: translate(35%, 100%);
+      }
+
+      &:nth-of-type(9) {
+        transform: translate(10%, 40%);
+      }
+
+      &:nth-of-type(10) {
+        transform: translate(20%, 20%);
       }
     }
   }
