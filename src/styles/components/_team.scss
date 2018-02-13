@@ -7,7 +7,10 @@
     $color-red,
     $color-fuchsia-pink,
     $color-scampi,
-    $color-turquoise
+    $color-turquoise,
+    $color-blue,
+    $color-scarlet,
+    $color-orange
   );
 
   position: relative;
@@ -216,6 +219,10 @@
 
       &:nth-of-type(10) {
         transform: translate(20%, 20%);
+      }
+
+      &:nth-of-type(11) {
+        transform: translate(20%, 40%);
       }
     }
   }
