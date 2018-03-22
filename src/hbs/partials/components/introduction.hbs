@@ -31,7 +31,7 @@
           <h3 class="js-sr">{{ introduction.pastEventsLabel }}</h3>
           <div class="js-sr">
             {{#each introduction.pastEvents as |pastEvent|}}
-              <a class="hero__detail__event" href="{{ pastEvent.href }}">
+              <a class="hero__detail__event" href="{{ pastEvent.href }}" target="_blank">
                 {{ pastEvent.text }},
                 <strong class="hero__detail__city">{{ pastEvent.city }}</strong>
               </a><br/>

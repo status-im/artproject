@@ -28,7 +28,7 @@
       <h3 class="js-sr">{{ hero.eventsLabel }}</h3>
       <div class="js-sr hero__detail__float">
         {{#each hero.events as |event|}}
-          <a class="hero__detail__event" href="{{ event.href }}">
+          <a class="hero__detail__event" href="{{ event.href }}" target="_blank">
             {{ event.text }},
             <strong class="hero__detail__city">{{ event.city }}</strong>
           </a><br/>
