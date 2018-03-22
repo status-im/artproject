@@ -35,30 +35,21 @@
   position: relative;
   z-index: 10;
   display: block;
-  color: $color-white;
 
   &__subtitle {
-    position: absolute;
-    right: 0;
-    bottom: -2px;
-    font-size: 10px;
-    transform: translate(50%, 100%);
+    margin: 25px 0 0 2px;
+    color: $color-white;
+
+    svg {
+      width: 50px;
+      height: 10px;
+    }
 
     @media #{$screen-sm} {
-      bottom: -5px;
-      font-size: 12px;
-    }
-  }
-
-  svg {
-    width: 75px;
-    height: 15px;
-  }
-
-  @media #{$screen-sm} {
-    svg {
-      width: 125px;
-      height: 26px;
+      svg {
+        width: 42px;
+        height: 9px;
+      }
     }
   }
 }

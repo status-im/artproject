@@ -25,13 +25,13 @@
 
   <div class="hero__bottom">
     <div class="hero__detail js-parallax" data-rellax-speed="-0.2">
-      <h3 class="hero__detail__title js-sr">{{ hero.eventsLabel }}</h3>
-      <div class="js-sr">
+      <h3 class="js-sr">{{ hero.eventsLabel }}</h3>
+      <div class="js-sr hero__detail__float">
         {{#each hero.events as |event|}}
-          <p class="hero__detail__event">
+          <a class="hero__detail__event" href="{{ event.href }}">
             {{ event.text }},
             <strong class="hero__detail__city">{{ event.city }}</strong>
-          </p>
+          </a><br/>
         {{/each}}
       </div>
     </div>

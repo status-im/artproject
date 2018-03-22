@@ -22,7 +22,7 @@
   &__header {
     @media #{$screen-md} {
       position: absolute;
-      bottom: 100px;
+      top: -20px;
       left: 40px;
       z-index: 2;
     }
