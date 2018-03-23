@@ -75,6 +75,10 @@
     z-index: 10;
     margin-top: 10px;
 
+    &:first-child {
+      margin-right: 220px;
+    }
+
     @media #{$screen-sm} {
       position: absolute;
       right: 18%;

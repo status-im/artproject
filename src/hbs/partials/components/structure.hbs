@@ -11,16 +11,17 @@
       <div class="js-reveal-block">
         <div class="structure__image" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="900"></div>
       </div>
-
-      {{> components/button
-        label=structure.button.label
-        href=structure.button.href
-        class="structure__button"
-        backgroundColor="#000"
-        orangeReveal=true
-        rellax-speed="-0.4"
-        icon=(svg structure.button.icon)
-      }}
+      {{#each structure.buttons as |button|}}
+        {{> components/button
+          label=button.label
+          href=button.href
+          class="structure__button"
+          backgroundColor="#000"
+          orangeReveal=true
+          rellax-speed="-0.4"
+          icon=(svg button.icon)
+        }}
+      {{/each}}
     </div>
 
     <div class="structure__details">
