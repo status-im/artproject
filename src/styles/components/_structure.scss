@@ -73,16 +73,10 @@
 
   &__button {
     z-index: 10;
-    margin-top: 10px;
-
-    &:first-child {
-      margin-right: 220px;
-    }
+    margin: 0;
 
     @media #{$screen-sm} {
-      position: absolute;
-      right: 18%;
-      bottom: -20px;
+      margin: 10px 0 0 4px;
     }
 
     @media #{$screen-md} {
