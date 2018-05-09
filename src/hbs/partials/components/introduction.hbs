@@ -41,13 +41,15 @@
       </div>
 
       <div class="introduction__button">
-        {{> components/button
-          label=introduction.button.label
-          href=introduction.button.href
-          orangeReveal=true
-          backgroundColor="#000"
-          rellax-speed="0.5"
-        }}
+        {{#each introduction.buttons as |button|}}
+          {{> components/button
+            label=button.label
+            href=button.href
+            orangeReveal=true
+            backgroundColor="#000"
+            rellax-speed="0.5"
+          }}
+        {{/each}}
       </div>
 
       {{> components/next-section-link
